@@ -5,7 +5,22 @@
 # Create a list of dictionaries to represent the grid of cells
 # a grid is a 9x9 matrx of cells
 # Each cell has a value {None or 0-9 if possible_numbers !None}, row, column, box_number, and list of possible_numbers {1-9 or Blank if value !None} [#COULDI do away with the need to have a box number?]
+class cell:
+    def __init__(self, row, column, box):
+        self.row = row
+        self.column = column
+        self.box = box
+        self.possible_numbers=list(range(1,10))
 
+class grid:
+    def __init__(self):
+        self.cells = self.create_cells()
+    
+    def create_cells(self):
+        cells_for_grid = [[],[],[],[],[],[],[],[],[],[],[]]
+        for i in cells_for_grid:
+            for j in range(1,10):
+                
 
 # For every-function from now on, if the function does not change the state of the grid, continue, if it does start from the return to the journey's start point
 

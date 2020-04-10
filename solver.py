@@ -4,7 +4,7 @@
 
 # Create a list of dictionaries to represent the grid of cells
 # a grid is a 9x9 matrx of cells
-# Each cell has a value {None or 0-9 if possible_numbers !None}, row, column, box_number, and list of possible_numbers {1-9 or Blank if value !None} [#COULDI do away with the need to have a box number?]
+# Each cell has a value {None or 0-9 if possible_numbers !None}, row, column, and list of possible_numbers {1-9 or Blank if value !None} [#COULDI do away with the need to have a box number?]
 class cell:
     def __init__(self, row, column, box):
         self.row = row
@@ -13,16 +13,26 @@ class cell:
         self.possible_numbers=list(range(1,10))
 
 class grid:
-    def __init__(self):
+    def __init__(self, problem_state):
         self.cells = self.create_cells()
-    
+        self.cells = self.populate_cells(problem_state)
+# This method creates kind of a copy of the problem state to do the solving with, a data structure for the sudoku to be  solved within
     def create_cells(self):
-        cells_for_grid = [[],[],[],[],[],[],[],[],[],[],[]]
+        cells_for_grid = [[],[],[],[],[],[],[],[],[]]
         for i in cells_for_grid:
             for j in range(1,10):
-                
+                i.append([])
+                for k in range(1,10):
+                    i[j] = {'value': None, 'row': i, 'column': j, 'possible_numbers': [i for i in range(1,10)]}
+# What I imagine the the problem state will be is a list of lists that are None (or 0) if the the number is blank and its number if it is the number it is
+    def populate_cells(self, problem_state):
+        for i in problem_state:
+            for j in problem_state[i]:
+                if j is not None:
+                    self.cells[i][j]['value'] = problem_state[i][j]
 
-# For every-function from now on, if the function does not change the state of the grid, continue, if it does start from the return to the journey's start point
+
+# For every-function from now on, if the function does not change the state of the grid, continue, if it does start from the return to the journey's start point if you reach the end of the journey you cant solve the 
 
 # THIS IS THE JOURNEY'S START POINT
 

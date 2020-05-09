@@ -24,7 +24,8 @@ class grid:
                 i.append([])
                 for k in range(1,10):
                     i[j] = {'value': None, 'row': i, 'column': j, 'possible_numbers': [i for i in range(1,10)]}
-# What I imagine the the problem state will be is a list of lists that are None (or 0) if the the number is blank and its number if it is the number it is
+# What I imagine the the problem state will be is a list of  81 numbers that
+# indicate 0 if the cell is blank or the populating number otherwise
     def populate_cells(self, problem_state):
         for i in problem_state:
             for j in problem_state[i]:
@@ -32,7 +33,7 @@ class grid:
                     self.cells[i][j]['value'] = problem_state[i][j]
 
 
-# For every-function from now on, if the function does not change the state of the grid, continue, if it does start from the return to the journey's start point if you reach the end of the journey you cant solve the 
+# For every-function from now on, if the function does not change the state of the grid, continue, if it does start from the return to the journey's start point if you reach the end of the journey you cant solve the
 
 # THIS IS THE JOURNEY'S START POINT
 

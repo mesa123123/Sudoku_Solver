@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1500">
+    <style>
+        #border { fill: none; stroke: black; stroke-width: 2px; }
+        .firstBorderColumn { transform: translate(0px, 0px); } .secondBorderColumn { transform: translate(60px, 0px); } .thirdBorderColumn { transform: translate(120px, 0px); }
+    </style>
+    <defs>
+        <rect id="border" width="60" height="60"/>
+        <rect id="cell" width="20" height="20"/>
+    </defs>
+    <g>
+        <use class="firstBorderColumn firstBorderRow" href="#border"/>
+        <use class="firstrow firstcolumn" href="#cell"/>
+    </g>
+    <g>
+        <use class="firstBorderColumn secondBorderRow" href="#border"/>
+        <use class="fourthrow firstcolumn" href="#cell"/>
+    </g>
+    <g>
+        <use class="firstBorderColumn thirdBorderRow" href="#border"/>
+    </g>
+    <g>
+        <use class="secondBorderColumn firstBorderRow" href="#border"/>
+    </g>
+    <g>
+        <use class="secondBorderColumn secondBorderRow" href="#border"/>
+    </g>
+    <g>
+        <use class="secondBorderColumn thirdBorderRow" href="#border"/>
+    </g>
+    <g>
+        <use class="thirdBorderColumn firstBorderRow" href="#border"/>
+    </g>
+    <g>
+        <use class="thirdBorderColumn secondBorderRow" href="#border"/>
+    </g>
+    <g>
+        <use class="thirdBorderColumn thirdBorderRow" href="#border"/>
+    </g>
+</svg>

@@ -16,18 +16,19 @@ This document outlines the requirements and their status to keep track of the pr
 Each requirement below the second level (e.g. 1 -> a -> _3rd Level_) will have a type:
 
 * Sub-Task - (this is a piece of a requirement that whose completion is considered the most atomic piece of work)
-* Bug - (this is a piece of a requirement where earlier development work didn't work out right therefore something needs to be fixed) 
+* Bug - (this is a piece of a requirement where earlier development work didn't work out right therefore something needs to be fixed)
     * Bugs are notated as an indented version of a subtask, they contain two sentences, a brief bug description and what needs to be done to fix it (in theory)
 
 ## Requirements List
 
 1. Blog Post (*)
-    1. Introduction (/)
-    2. Structure of the Game (*)
-    3. Discussing of common solving technique (*)
-    4. Data Structures (*)
-    5. GUI Display (*)
-    6. Limitations to the Solving Technique, and where to go from here (*)
+    1. Subtask - Introduction (/)
+    2. Subtask - Structure of the Game (d)
+        1. SVG Animation (d)
+    3. Subtask - Discussing of common solving technique (*)
+    4. Subtask - Data Structures (*)
+    5. Subtask -  GUI Display (*)
+    6. Subtask - Limitations to the Solving Technique, and where to go from here (*)
 
 2. Solver Programme (*)
     1. Game Object (*)
@@ -36,3 +37,9 @@ Each requirement below the second level (e.g. 1 -> a -> _3rd Level_) will have a
     2. Cell Object (*)
         * Subtask - current value (*)
         * Subtask - possible values (*)
+
+### Scope Creep
+
+1. Make Little HTML Applets for describing what I'm talking about:
+    1. Sudoku Primer
+

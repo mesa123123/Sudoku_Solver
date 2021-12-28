@@ -25,10 +25,6 @@
         transform: translate(0%, 10%);
       }
     </style>
-    <script type="text/javascript">
-        
-
-    </script>
     <svg height="50vh" width="50vh">
       <g class="firstSquare">
         <g class="firstRow">
@@ -94,5 +90,17 @@
         </g>
       </g>
     </svg>
+    <script type="text/javascript">
+      // for a rectangle class in the document, get all classes of parent gs
+      const cells = document.getElementsByTagName("rect");
+      // for a given cell get all parent elements until the tag is not g
+      var myNode = cells.item(0).parentElement;
+      var myParentClasses = new Array();
+      while (myNode.nodeName == "g") {
+        myParentClasses.push(myNode.classList);
+        myNode = myNode.parentElement;
+      }
+      console.log(myParentClasses);
+    </script>
   </body>
 </html>

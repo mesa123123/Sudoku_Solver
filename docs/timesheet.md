@@ -10,8 +10,21 @@ The purpose of this document is to log time spent on the technical test for Rush
 
 ## Timesheet Records
 
-
 | Date - Time | Progress Achieved | Activity Breakdown | Lessons Learned | LADRs Written |
 | --- | --- | --- | --- | --- |
 | 25.12.21 0037 | Subtask 1.1 | Setup Project Repo, Completed Intro Draft | n/a | 001 |
+
+| Date - Time | Progress Achieved | Activity Breakdown | Lessons Learned | LADRs Written |
+| --- | --- | --- | --- | --- |
+| 26.12.21 1800 | none | Looked into SVG styling with css, set up interactive interface and injection into html | svg styling with css and \<object\> tag within the html | 002 |
+
+| Date - Time | Progress Achieved | Activity Breakdown | Lessons Learned | LADRs Written |
+| --- | --- | --- | --- | --- |
+| 27.12.21 | none | floundered around with svg styling and never got it to work! | n/a | n/a |
+
+
+| Date - Time | Progress Achieved | Activity Breakdown | Lessons Learned | LADRs Written |
+| --- | --- | --- | --- | --- |
+| 28.12.21 1301 | n/a | Figured out the svg styling shit, finally! | you've got to select the def element in order to sort out css styling in svg stuff!   | n/a |
+
 

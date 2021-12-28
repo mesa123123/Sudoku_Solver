@@ -1,2 +1,0 @@
-autopep8==1.5
-pytest==5.4.1

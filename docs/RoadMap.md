@@ -43,3 +43,6 @@ Each requirement below the second level (e.g. 1 -> a -> _3rd Level_) will have a
 1. Make Little HTML Applets for describing what I'm talking about:
     1. Sudoku Primer
 
+## Further Ideas
+
+* svg learnings with css - how I made the sudoku widget and the interface

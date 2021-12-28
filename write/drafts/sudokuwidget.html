@@ -1,16 +1,50 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <title>Sudokuwidget</title>
-</head>
+  </head>
 
-<body>
-    <object type="image/svg+xml" data="../../assets/svg/primer_sudoku_grid_animation.svg" class="sudokugrid">
-        Sudokuwidget </object>
-
-</body>
-
+  <body>
+    <style>
+      svg def g#gridSquare use.cell {
+        stroke: black;
+        stroke-width: 0.25%;
+        fill: white;
+      }
+      svg def g#gridSquare use.firstRow {
+        transform: translate(0%, 0%);
+      }
+      svg def g#gridSquare use.secondRow {
+        transform: translate(0%, 5%);
+      }
+      svg def g#gridSquare use.thirdRow {
+        transform: translate(0%, 10%);
+      }
+    </style>
+    <script type="text/javascript"></script>
+    <svg height="50vh" width="50vh">
+      <def>
+        <rect id="cell" height="5%" width="5%" />
+        <g id="gridRow">
+          <use href="#cell" class="cell firstColumn" />
+          <use href="#cell" class="cell secondColumn" />
+          <use href="#cell" class="cell thirdColumn" />
+        </g>
+        <g id="gridSquare">
+          <use href="#gridRow" class="firstRow" />
+          <use href="#gridRow" class="secondRow" />
+          <use href="#gridRow" class="thirdRow" />
+        </g>
+        <g id="sudokuSquare">
+          <use href="gridSquare" id="1" />
+          <use href="gridSquare" id="2" />
+          <use href="gridSquare" id="3" />
+          <use href="gridSquare" id="4" />
+        </g>
+      </def>
+      <use href="#sudokuSquare" />
+    </svg>
+  </body>
 </html>

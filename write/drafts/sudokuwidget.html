@@ -97,10 +97,22 @@
       var myNode = cells.item(0).parentElement;
       var myParentClasses = new Array();
       while (myNode.nodeName == "g") {
-        myParentClasses.push(myNode.classList);
+        myParentClasses.push(myNode.classList[0]);
         myNode = myNode.parentElement;
       }
-      console.log(myParentClasses);
+        var nodeWithSameClass = new Array()
+      function changeCells() {
+          myParentClasses.forEach(pClass => {
+            nodeWithSameClass.push(Array.from(document.querySelectorAll("." + pClass)))
+          })
+          nodeWithSameClass = nodeWithSameClass.flat()
+          nodeWithSameClass.forEach(node => { if(node.getElementsByTagName('rect') != null) { Array.from(node.getElementsByTagName('rect')).forEach(rect => {
+                rect.style.fill = 'red'
+              })   
+          } 
+          })
+      }
     </script>
+    <button onclick="changeCells()"/>
   </body>
 </html>

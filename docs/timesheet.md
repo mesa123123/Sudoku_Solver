@@ -28,3 +28,7 @@ The purpose of this document is to log time spent on the technical test for Rush
 | 28.12.21 1301 | n/a | Figured out the svg styling shit, finally! | you've got to select the def element in order to sort out css styling in svg stuff!   | n/a |
 
 
+| Date - Time | Progress Achieved | Activity Breakdown | Lessons Learned | LADRs Written |
+| --- | --- | --- | --- | --- |
+| 29.12.21 1800 | n/a  | Js in sudoku widget, finally sorted out changing other classes  | DOM elements, HTML Collections, basic headaches around those!  | n/a  |
+

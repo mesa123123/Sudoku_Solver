@@ -46,3 +46,5 @@ Each requirement below the second level (e.g. 1 -> a -> _3rd Level_) will have a
 ## Further Ideas
 
 * svg learnings with css - how I made the sudoku widget and the interface
+    * Changing css properties based on related parent classes
+* a way to insert js widgets into blog posts written in markdown

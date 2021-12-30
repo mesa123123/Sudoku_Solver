@@ -48,3 +48,4 @@ Each requirement below the second level (e.g. 1 -> a -> _3rd Level_) will have a
 * svg learnings with css - how I made the sudoku widget and the interface
     * Changing css properties based on related parent classes
 * a way to insert js widgets into blog posts written in markdown
+* Is the best way to query elements in a document child -> or parent to child in this context?

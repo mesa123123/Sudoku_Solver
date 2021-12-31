@@ -505,9 +505,12 @@
     <script type="text/javascript">
       // for a rectangle class in the document, get all classes of parent gs
       const cells = Array.from(document.getElementsByTagName("rect"));
-      clickedCell = cells[5]
-      var rectClassList = Array.from(clickedCell.classList);
-      function changeCells() {
+      cells.forEach(cell => {
+        cell.addEventListener("mouseenter", function(event) { changeCells(this) });
+          cell.addEventListener("mouseout", function(event) { changeCellsBack() });
+      })
+      function changeCells(clickedCell) {
+        var rectClassList = Array.from(clickedCell.classList);
         cells.forEach((cell) => {
           var cellClassList = Array.from(cell.classList);
           // if the fourth is the same
@@ -529,7 +532,9 @@
         });
         clickedCell.style["fill"] = 'black'
       }
+      function changeCellsBack() {
+          cells.forEach((cell) => { cell.style["fill"] = "white"; })
+      }
     </script>
-    <button onclick="changeCells()">Push the button</button>
   </body>
 </html>

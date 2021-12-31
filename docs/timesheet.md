@@ -32,3 +32,8 @@ The purpose of this document is to log time spent on the technical test for Rush
 | --- | --- | --- | --- | --- |
 | 29.12.21 1800 | n/a  | Js in sudoku widget, finally sorted out changing other classes  | DOM elements, HTML Collections, basic headaches around those!  | n/a  |
 
+
+| Date - Time | Progress Achieved | Activity Breakdown | Lessons Learned | LADRs Written |
+| --- | --- | --- | --- | --- |
+| 31.12.21 1825  | 1.1 (/) | Completed the svg animations for the sudoku widget, at least to the MVP stage | n/a |
+

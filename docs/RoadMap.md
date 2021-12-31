@@ -24,7 +24,7 @@ Each requirement below the second level (e.g. 1 -> a -> _3rd Level_) will have a
 1. Blog Post (*)
     1. Subtask - Introduction (/)
     2. Subtask - Structure of the Game (d)
-        1. SVG Animation (d)
+        1. SVG Animation (/)
     3. Subtask - Discussing of common solving technique (*)
     4. Subtask - Data Structures (*)
     5. Subtask -  GUI Display (*)
@@ -41,7 +41,7 @@ Each requirement below the second level (e.g. 1 -> a -> _3rd Level_) will have a
 ### Scope Creep
 
 1. Make Little HTML Applets for describing what I'm talking about:
-    1. Sudoku Primer
+    1. Sudoku Primer (/) - MVP complete
 
 ## Further Ideas
 

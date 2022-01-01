@@ -13,13 +13,13 @@ To complete the puzzle one must enter the numbers 1-9 so that it meets these cri
 Given these rules and the size of the grid, no number can be used more than once in a row, column, or square.
 At the start of the game you are given a certain number of squares already filled in and you must fill the grid in from there
 
-![ImageoftheBeginningofThePuzzle](../../assets/images/startinggame.svg "start of the puzzle")
+[//]: Widget ./sudokuwidget.html?animate=start
 
 ## The Pencil Mark Method
 
 Because you can't use a number more than once, each cell is constrained by what values have already been placed. In other words each cell is dependent on the cells in every column, row, and 3x3 grid they are a part of.
 
-[//]: Widget ./sudokuwidget.html
+[//]: Widget ./sudokuwidget.html?animate=dependencies
 
 For instance, if there is a three in same row as a cell and a four within the same column, you can neither place a four nor a three in that cell.
 Obviously only the most adept sudoku player among us can keep track of all 81 cells and eliminate from the nine possibilities that occur in all of them. The solution to our limited brain capacity and the way of keeping track of them on the puzzle grid has been referred to as [pencil marks][Ref1].
@@ -28,12 +28,12 @@ Their general process works like this:
 
 * For each cell write the numbers 1-9 in a smaller font within the cell
 
-[//]: Widget ./pencilmarks.html
+[//]: Widget ./sudokuwidget.html?animate=pencilmarks
 
 * Now for each cell, check along the row, column and, grid to see if there are any already placed numbers
 * Erase those numbers from the current cell
 
-[//]: Widget ./pencilmarks2.html
+[//]: Widget ./sudokuwidget.html?animate=pencilmarkserase
 
 * You are left with the possibilities that this cell can now take
 * Then repeat this process for every cell on the grid

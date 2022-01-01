@@ -10,398 +10,411 @@
       :root {
         --cellLength: 6%;
       }
-      svg rect {
+      svg g {
         fill: none;
-        stroke: black;
-        stroke-width: 1px;
         height: var(--cellLength);
         width: var(--cellLength);
+        dominant-baseline: central;
       }
-      svg rect.firstColumn.firstRow.firstGridColumn.firstGridRow {
+      svg text {
+        fill: black;
+        x: 50%;
+        y: 50%;
+        dominant-baseline: central;
+      }
+      svg rect {
+        fill: inherit;
+        stroke: black;
+        stroke-width: calc(var(--cellLength) / 50);
+        height: calc(0.98 * var(--cellLength));
+        width: calc(0.98 * var(--cellLength));
+        dominant-baseline: central;
+      }
+      svg g.firstColumn.firstRow.firstGridColumn.firstGridRow {
         transform: translate(0%, 0%);
       }
-      svg rect.secondColumn.firstRow.firstGridColumn.firstGridRow {
+      svg g.secondColumn.firstRow.firstGridColumn.firstGridRow {
         transform: translate(var(--cellLength), 0%);
       }
-      svg rect.thirdColummn.firstRow.firstGridColumn.firstGridRow {
+      svg g.thirdColummn.firstRow.firstGridColumn.firstGridRow {
         transform: translate(calc(2 * var(--cellLength)), 0%);
       }
-      svg rect.firstColumn.secondRow.firstGridColumn.firstGridRow {
+      svg g.firstColumn.secondRow.firstGridColumn.firstGridRow {
         transform: translate(0%, var(--cellLength));
       }
-      svg rect.secondColumn.secondRow.firstGridColumn.firstGridRow {
+      svg g.secondColumn.secondRow.firstGridColumn.firstGridRow {
         transform: translate(var(--cellLength), var(--cellLength));
       }
-      svg rect.thirdColummn.secondRow.firstGridColumn.firstGridRow {
+      svg g.thirdColummn.secondRow.firstGridColumn.firstGridRow {
         transform: translate(calc(2 * var(--cellLength)), var(--cellLength));
       }
-      svg rect.firstColumn.thirdRow.firstGridColumn.firstGridRow {
+      svg g.firstColumn.thirdRow.firstGridColumn.firstGridRow {
         transform: translate(0%, calc(2 * var(--cellLength)));
       }
-      svg rect.secondColumn.thirdRow.firstGridColumn.firstGridRow {
+      svg g.secondColumn.thirdRow.firstGridColumn.firstGridRow {
         transform: translate(var(--cellLength), calc(2 * var(--cellLength)));
       }
-      svg rect.thirdColummn.thirdRow.firstGridColumn.firstGridRow {
+      svg g.thirdColummn.thirdRow.firstGridColumn.firstGridRow {
         transform: translate(
           calc(2 * var(--cellLength)),
           calc(2 * var(--cellLength))
         );
       }
-      svg rect.firstColumn.firstRow.secondGridColumn.firstGridRow {
+      svg g.firstColumn.firstRow.secondGridColumn.firstGridRow {
         transform: translate(calc(3 * var(--cellLength)), 0%);
       }
-      svg rect.secondColumn.firstRow.secondGridColumn.firstGridRow {
+      svg g.secondColumn.firstRow.secondGridColumn.firstGridRow {
         transform: translate(calc(4 * var(--cellLength)), 0%);
       }
-      svg rect.thirdColummn.firstRow.secondGridColumn.firstGridRow {
+      svg g.thirdColummn.firstRow.secondGridColumn.firstGridRow {
         transform: translate(calc(5 * var(--cellLength)), 0%);
       }
-      svg rect.firstColumn.secondRow.secondGridColumn.firstGridRow {
+      svg g.firstColumn.secondRow.secondGridColumn.firstGridRow {
         transform: translate(calc(3 * var(--cellLength)), var(--cellLength));
       }
-      svg rect.secondColumn.secondRow.secondGridColumn.firstGridRow {
+      svg g.secondColumn.secondRow.secondGridColumn.firstGridRow {
         transform: translate(calc(4 * var(--cellLength)), var(--cellLength));
       }
-      svg rect.thirdColummn.secondRow.secondGridColumn.firstGridRow {
+      svg g.thirdColummn.secondRow.secondGridColumn.firstGridRow {
         transform: translate(calc(5 * var(--cellLength)), var(--cellLength));
       }
-      svg rect.firstColumn.thirdRow.secondGridColumn.firstGridRow {
+      svg g.firstColumn.thirdRow.secondGridColumn.firstGridRow {
         transform: translate(
           calc(3 * var(--cellLength)),
           calc(2 * var(--cellLength))
         );
       }
-      svg rect.secondColumn.thirdRow.secondGridColumn.firstGridRow {
+      svg g.secondColumn.thirdRow.secondGridColumn.firstGridRow {
         transform: translate(
           calc(4 * var(--cellLength)),
           calc(2 * var(--cellLength))
         );
       }
-      svg rect.thirdColummn.thirdRow.secondGridColumn.firstGridRow {
+      svg g.thirdColummn.thirdRow.secondGridColumn.firstGridRow {
         transform: translate(
           calc(5 * var(--cellLength)),
           calc(2 * var(--cellLength))
         );
       }
-      svg rect.firstColumn.firstRow.thirdGridColumn.firstGridRow {
+      svg g.firstColumn.firstRow.thirdGridColumn.firstGridRow {
         transform: translate(calc(6 * var(--cellLength)), 0%);
       }
-      svg rect.secondColumn.firstRow.thirdGridColumn.firstGridRow {
+      svg g.secondColumn.firstRow.thirdGridColumn.firstGridRow {
         transform: translate(calc(7 * var(--cellLength)), 0%);
       }
-      svg rect.thirdColummn.firstRow.thirdGridColumn.firstGridRow {
+      svg g.thirdColummn.firstRow.thirdGridColumn.firstGridRow {
         transform: translate(calc(8 * var(--cellLength)), 0%);
       }
-      svg rect.firstColumn.secondRow.thirdGridColumn.firstGridRow {
+      svg g.firstColumn.secondRow.thirdGridColumn.firstGridRow {
         transform: translate(calc(6 * var(--cellLength)), var(--cellLength));
       }
-      svg rect.secondColumn.secondRow.thirdGridColumn.firstGridRow {
+      svg g.secondColumn.secondRow.thirdGridColumn.firstGridRow {
         transform: translate(calc(7 * var(--cellLength)), var(--cellLength));
       }
-      svg rect.thirdColummn.secondRow.thirdGridColumn.firstGridRow {
+      svg g.thirdColummn.secondRow.thirdGridColumn.firstGridRow {
         transform: translate(calc(8 * var(--cellLength)), var(--cellLength));
       }
-      svg rect.firstColumn.thirdRow.thirdGridColumn.firstGridRow {
+      svg g.firstColumn.thirdRow.thirdGridColumn.firstGridRow {
         transform: translate(
           calc(6 * var(--cellLength)),
           calc(2 * var(--cellLength))
         );
       }
-      svg rect.secondColumn.thirdRow.thirdGridColumn.firstGridRow {
+      svg g.secondColumn.thirdRow.thirdGridColumn.firstGridRow {
         transform: translate(
           calc(7 * var(--cellLength)),
           calc(2 * var(--cellLength))
         );
       }
-      svg rect.thirdColummn.thirdRow.thirdGridColumn.firstGridRow {
+      svg g.thirdColummn.thirdRow.thirdGridColumn.firstGridRow {
         transform: translate(
           calc(8 * var(--cellLength)),
           calc(2 * var(--cellLength))
         );
       }
-      svg rect.firstColumn.firstRow.firstGridColumn.secondGridRow {
+      svg g.firstColumn.firstRow.firstGridColumn.secondGridRow {
         transform: translate(0%, calc(3 * var(--cellLength)));
       }
-      svg rect.secondColumn.firstRow.firstGridColumn.secondGridRow {
+      svg g.secondColumn.firstRow.firstGridColumn.secondGridRow {
         transform: translate(var(--cellLength), calc(3 * var(--cellLength)));
       }
-      svg rect.thirdColummn.firstRow.firstGridColumn.secondGridRow {
+      svg g.thirdColummn.firstRow.firstGridColumn.secondGridRow {
         transform: translate(
           calc(2 * var(--cellLength)),
           calc(3 * var(--cellLength))
         );
       }
-      svg rect.firstColumn.secondRow.firstGridColumn.secondGridRow {
+      svg g.firstColumn.secondRow.firstGridColumn.secondGridRow {
         transform: translate(0%, calc(4 * var(--cellLength)));
       }
-      svg rect.secondColumn.secondRow.firstGridColumn.secondGridRow {
+      svg g.secondColumn.secondRow.firstGridColumn.secondGridRow {
         transform: translate(var(--cellLength), calc(4 * var(--cellLength)));
       }
-      svg rect.thirdColummn.secondRow.firstGridColumn.secondGridRow {
+      svg g.thirdColummn.secondRow.firstGridColumn.secondGridRow {
         transform: translate(
           calc(2 * var(--cellLength)),
           calc(4 * var(--cellLength))
         );
       }
-      svg rect.firstColumn.thirdRow.firstGridColumn.secondGridRow {
+      svg g.firstColumn.thirdRow.firstGridColumn.secondGridRow {
         transform: translate(0%, calc(5 * var(--cellLength)));
       }
-      svg rect.secondColumn.thirdRow.firstGridColumn.secondGridRow {
+      svg g.secondColumn.thirdRow.firstGridColumn.secondGridRow {
         transform: translate(var(--cellLength), calc(5 * var(--cellLength)));
       }
-      svg rect.thirdColummn.thirdRow.firstGridColumn.secondGridRow {
+      svg g.thirdColummn.thirdRow.firstGridColumn.secondGridRow {
         transform: translate(
           calc(2 * var(--cellLength)),
           calc(5 * var(--cellLength))
         );
       }
-      svg rect.firstColumn.firstRow.secondGridColumn.secondGridRow {
+      svg g.firstColumn.firstRow.secondGridColumn.secondGridRow {
         transform: translate(
           calc(3 * var(--cellLength)),
           calc(3 * var(--cellLength))
         );
       }
-      svg rect.secondColumn.firstRow.secondGridColumn.secondGridRow {
+      svg g.secondColumn.firstRow.secondGridColumn.secondGridRow {
         transform: translate(
           calc(4 * var(--cellLength)),
           calc(3 * var(--cellLength))
         );
       }
-      svg rect.thirdColummn.firstRow.secondGridColumn.secondGridRow {
+      svg g.thirdColummn.firstRow.secondGridColumn.secondGridRow {
         transform: translate(
           calc(5 * var(--cellLength)),
           calc(3 * var(--cellLength))
         );
       }
-      svg rect.firstColumn.secondRow.secondGridColumn.secondGridRow {
+      svg g.firstColumn.secondRow.secondGridColumn.secondGridRow {
         transform: translate(
           calc(3 * var(--cellLength)),
           calc(4 * var(--cellLength))
         );
       }
-      svg rect.secondColumn.secondRow.secondGridColumn.secondGridRow {
+      svg g.secondColumn.secondRow.secondGridColumn.secondGridRow {
         transform: translate(
           calc(4 * var(--cellLength)),
           calc(4 * var(--cellLength))
         );
       }
-      svg rect.thirdColummn.secondRow.secondGridColumn.secondGridRow {
+      svg g.thirdColummn.secondRow.secondGridColumn.secondGridRow {
         transform: translate(
           calc(5 * var(--cellLength)),
           calc(4 * var(--cellLength))
         );
       }
-      svg rect.firstColumn.thirdRow.secondGridColumn.secondGridRow {
+      svg g.firstColumn.thirdRow.secondGridColumn.secondGridRow {
         transform: translate(
           calc(3 * var(--cellLength)),
           calc(5 * var(--cellLength))
         );
       }
-      svg rect.secondColumn.thirdRow.secondGridColumn.secondGridRow {
+      svg g.secondColumn.thirdRow.secondGridColumn.secondGridRow {
         transform: translate(
           calc(4 * var(--cellLength)),
           calc(5 * var(--cellLength))
         );
       }
-      svg rect.thirdColummn.thirdRow.secondGridColumn.secondGridRow {
+      svg g.thirdColummn.thirdRow.secondGridColumn.secondGridRow {
         transform: translate(
           calc(5 * var(--cellLength)),
           calc(5 * var(--cellLength))
         );
       }
-      svg rect.firstColumn.firstRow.thirdGridColumn.secondGridRow {
+      svg g.firstColumn.firstRow.thirdGridColumn.secondGridRow {
         transform: translate(
           calc(6 * var(--cellLength)),
           calc(3 * var(--cellLength))
         );
       }
-      svg rect.secondColumn.firstRow.thirdGridColumn.secondGridRow {
+      svg g.secondColumn.firstRow.thirdGridColumn.secondGridRow {
         transform: translate(
           calc(7 * var(--cellLength)),
           calc(3 * var(--cellLength))
         );
       }
-      svg rect.thirdColummn.firstRow.thirdGridColumn.secondGridRow {
+      svg g.thirdColummn.firstRow.thirdGridColumn.secondGridRow {
         transform: translate(
           calc(8 * var(--cellLength)),
           calc(3 * var(--cellLength))
         );
       }
-      svg rect.firstColumn.secondRow.thirdGridColumn.secondGridRow {
+      svg g.firstColumn.secondRow.thirdGridColumn.secondGridRow {
         transform: translate(
           calc(6 * var(--cellLength)),
           calc(4 * var(--cellLength))
         );
       }
-      svg rect.secondColumn.secondRow.thirdGridColumn.secondGridRow {
+      svg g.secondColumn.secondRow.thirdGridColumn.secondGridRow {
         transform: translate(
           calc(7 * var(--cellLength)),
           calc(4 * var(--cellLength))
         );
       }
-      svg rect.thirdColummn.secondRow.thirdGridColumn.secondGridRow {
+      svg g.thirdColummn.secondRow.thirdGridColumn.secondGridRow {
         transform: translate(
           calc(8 * var(--cellLength)),
           calc(4 * var(--cellLength))
         );
       }
-      svg rect.firstColumn.thirdRow.thirdGridColumn.secondGridRow {
+      svg g.firstColumn.thirdRow.thirdGridColumn.secondGridRow {
         transform: translate(
           calc(6 * var(--cellLength)),
           calc(5 * var(--cellLength))
         );
       }
-      svg rect.secondColumn.thirdRow.thirdGridColumn.secondGridRow {
+      svg g.secondColumn.thirdRow.thirdGridColumn.secondGridRow {
         transform: translate(
           calc(7 * var(--cellLength)),
           calc(5 * var(--cellLength))
         );
       }
-      svg rect.thirdColummn.thirdRow.thirdGridColumn.secondGridRow {
+      svg g.thirdColummn.thirdRow.thirdGridColumn.secondGridRow {
         transform: translate(
           calc(8 * var(--cellLength)),
           calc(5 * var(--cellLength))
         );
       }
-      svg rect.firstColumn.firstRow.firstGridColumn.thirdGridRow {
+      svg g.firstColumn.firstRow.firstGridColumn.thirdGridRow {
         transform: translate(0%, calc(6 * var(--cellLength)));
       }
-      svg rect.secondColumn.firstRow.firstGridColumn.thirdGridRow {
+      svg g.secondColumn.firstRow.firstGridColumn.thirdGridRow {
         transform: translate(var(--cellLength), calc(6 * var(--cellLength)));
       }
-      svg rect.thirdColummn.firstRow.firstGridColumn.thirdGridRow {
+      svg g.thirdColummn.firstRow.firstGridColumn.thirdGridRow {
         transform: translate(
           calc(2 * var(--cellLength)),
           calc(6 * var(--cellLength))
         );
       }
-      svg rect.firstColumn.secondRow.firstGridColumn.thirdGridRow {
+      svg g.firstColumn.secondRow.firstGridColumn.thirdGridRow {
         transform: translate(0%, calc(7 * var(--cellLength)));
       }
-      svg rect.secondColumn.secondRow.firstGridColumn.thirdGridRow {
+      svg g.secondColumn.secondRow.firstGridColumn.thirdGridRow {
         transform: translate(var(--cellLength), calc(7 * var(--cellLength)));
       }
-      svg rect.thirdColummn.secondRow.firstGridColumn.thirdGridRow {
+      svg g.thirdColummn.secondRow.firstGridColumn.thirdGridRow {
         transform: translate(
           calc(2 * var(--cellLength)),
           calc(7 * var(--cellLength))
         );
       }
-      svg rect.firstColumn.thirdRow.firstGridColumn.thirdGridRow {
+      svg g.firstColumn.thirdRow.firstGridColumn.thirdGridRow {
         transform: translate(0%, calc(8 * var(--cellLength)));
       }
-      svg rect.secondColumn.thirdRow.firstGridColumn.thirdGridRow {
+      svg g.secondColumn.thirdRow.firstGridColumn.thirdGridRow {
         transform: translate(var(--cellLength), calc(8 * var(--cellLength)));
       }
-      svg rect.thirdColummn.thirdRow.firstGridColumn.thirdGridRow {
+      svg g.thirdColummn.thirdRow.firstGridColumn.thirdGridRow {
         transform: translate(
           calc(2 * var(--cellLength)),
           calc(8 * var(--cellLength))
         );
       }
-      svg rect.firstColumn.firstRow.secondGridColumn.thirdGridRow {
+      svg g.firstColumn.firstRow.secondGridColumn.thirdGridRow {
         transform: translate(
           calc(3 * var(--cellLength)),
           calc(6 * var(--cellLength))
         );
       }
-      svg rect.secondColumn.firstRow.secondGridColumn.thirdGridRow {
+      svg g.secondColumn.firstRow.secondGridColumn.thirdGridRow {
         transform: translate(
           calc(4 * var(--cellLength)),
           calc(6 * var(--cellLength))
         );
       }
-      svg rect.thirdColummn.firstRow.secondGridColumn.thirdGridRow {
+      svg g.thirdColummn.firstRow.secondGridColumn.thirdGridRow {
         transform: translate(
           calc(5 * var(--cellLength)),
           calc(6 * var(--cellLength))
         );
       }
-      svg rect.firstColumn.secondRow.secondGridColumn.thirdGridRow {
+      svg g.firstColumn.secondRow.secondGridColumn.thirdGridRow {
         transform: translate(
           calc(3 * var(--cellLength)),
           calc(7 * var(--cellLength))
         );
       }
-      svg rect.secondColumn.secondRow.secondGridColumn.thirdGridRow {
+      svg g.secondColumn.secondRow.secondGridColumn.thirdGridRow {
         transform: translate(
           calc(4 * var(--cellLength)),
           calc(7 * var(--cellLength))
         );
       }
-      svg rect.thirdColummn.secondRow.secondGridColumn.thirdGridRow {
+      svg g.thirdColummn.secondRow.secondGridColumn.thirdGridRow {
         transform: translate(
           calc(5 * var(--cellLength)),
           calc(7 * var(--cellLength))
         );
       }
-      svg rect.firstColumn.thirdRow.secondGridColumn.thirdGridRow {
+      svg g.firstColumn.thirdRow.secondGridColumn.thirdGridRow {
         transform: translate(
           calc(3 * var(--cellLength)),
           calc(8 * var(--cellLength))
         );
       }
-      svg rect.secondColumn.thirdRow.secondGridColumn.thirdGridRow {
+      svg g.secondColumn.thirdRow.secondGridColumn.thirdGridRow {
         transform: translate(
           calc(4 * var(--cellLength)),
           calc(8 * var(--cellLength))
         );
       }
-      svg rect.thirdColummn.thirdRow.secondGridColumn.thirdGridRow {
+      svg g.thirdColummn.thirdRow.secondGridColumn.thirdGridRow {
         transform: translate(
           calc(5 * var(--cellLength)),
           calc(8 * var(--cellLength))
         );
       }
-      svg rect.firstColumn.firstRow.thirdGridColumn.thirdGridRow {
+      svg g.firstColumn.firstRow.thirdGridColumn.thirdGridRow {
         transform: translate(
           calc(6 * var(--cellLength)),
           calc(6 * var(--cellLength))
         );
       }
-      svg rect.secondColumn.firstRow.thirdGridColumn.thirdGridRow {
+      svg g.secondColumn.firstRow.thirdGridColumn.thirdGridRow {
         transform: translate(
           calc(7 * var(--cellLength)),
           calc(6 * var(--cellLength))
         );
       }
-      svg rect.thirdColummn.firstRow.thirdGridColumn.thirdGridRow {
+      svg g.thirdColummn.firstRow.thirdGridColumn.thirdGridRow {
         transform: translate(
           calc(8 * var(--cellLength)),
           calc(6 * var(--cellLength))
         );
       }
-      svg rect.firstColumn.secondRow.thirdGridColumn.thirdGridRow {
+      svg g.firstColumn.secondRow.thirdGridColumn.thirdGridRow {
         transform: translate(
           calc(6 * var(--cellLength)),
           calc(7 * var(--cellLength))
         );
       }
-      svg rect.secondColumn.secondRow.thirdGridColumn.thirdGridRow {
+      svg g.secondColumn.secondRow.thirdGridColumn.thirdGridRow {
         transform: translate(
           calc(7 * var(--cellLength)),
           calc(7 * var(--cellLength))
         );
       }
-      svg rect.thirdColummn.secondRow.thirdGridColumn.thirdGridRow {
+      svg g.thirdColummn.secondRow.thirdGridColumn.thirdGridRow {
         transform: translate(
           calc(8 * var(--cellLength)),
           calc(7 * var(--cellLength))
         );
       }
-      svg rect.firstColumn.thirdRow.thirdGridColumn.thirdGridRow {
+      svg g.firstColumn.thirdRow.thirdGridColumn.thirdGridRow {
         transform: translate(
           calc(6 * var(--cellLength)),
           calc(8 * var(--cellLength))
         );
       }
-      svg rect.secondColumn.thirdRow.thirdGridColumn.thirdGridRow {
+      svg g.secondColumn.thirdRow.thirdGridColumn.thirdGridRow {
         transform: translate(
           calc(7 * var(--cellLength)),
           calc(8 * var(--cellLength))
         );
       }
-      svg rect.thirdColummn.thirdRow.thirdGridColumn.thirdGridRow {
+      svg g.thirdColummn.thirdRow.thirdGridColumn.thirdGridRow {
         transform: translate(
           calc(8 * var(--cellLength)),
           calc(8 * var(--cellLength))
@@ -409,91 +422,334 @@
       }
     </style>
     <svg height="80vh" width="80vh">
-      <rect class="firstColumn firstRow firstGridColumn firstGridRow" />
-      <rect class="secondColumn firstRow firstGridColumn firstGridRow" />
-      <rect class="thirdColummn firstRow firstGridColumn firstGridRow" />
-      <rect class="firstColumn secondRow firstGridColumn firstGridRow" />
-      <rect class="secondColumn secondRow firstGridColumn firstGridRow" />
-      <rect class="thirdColummn secondRow firstGridColumn firstGridRow" />
-      <rect class="firstColumn thirdRow firstGridColumn firstGridRow" />
-      <rect class="secondColumn thirdRow firstGridColumn firstGridRow" />
-      <rect class="thirdColummn thirdRow firstGridColumn firstGridRow" />
-      <rect class="firstColumn firstRow secondGridColumn firstGridRow" />
-      <rect class="secondColumn firstRow secondGridColumn firstGridRow" />
-      <rect class="thirdColummn firstRow secondGridColumn firstGridRow" />
-      <rect class="firstColumn secondRow secondGridColumn firstGridRow" />
-      <rect class="secondColumn secondRow secondGridColumn firstGridRow" />
-      <rect class="thirdColummn secondRow secondGridColumn firstGridRow" />
-      <rect class="firstColumn thirdRow secondGridColumn firstGridRow" />
-      <rect class="secondColumn thirdRow secondGridColumn firstGridRow" />
-      <rect class="thirdColummn thirdRow secondGridColumn firstGridRow" />
-      <rect class="firstColumn firstRow thirdGridColumn firstGridRow" />
-      <rect class="secondColumn firstRow thirdGridColumn firstGridRow" />
-      <rect class="thirdColummn firstRow thirdGridColumn firstGridRow" />
-      <rect class="firstColumn secondRow thirdGridColumn firstGridRow" />
-      <rect class="secondColumn secondRow thirdGridColumn firstGridRow" />
-      <rect class="thirdColummn secondRow thirdGridColumn firstGridRow" />
-      <rect class="firstColumn thirdRow thirdGridColumn firstGridRow" />
-      <rect class="secondColumn thirdRow thirdGridColumn firstGridRow" />
-      <rect class="thirdColummn thirdRow thirdGridColumn firstGridRow" />
-      <rect class="firstColumn firstRow firstGridColumn secondGridRow" />
-      <rect class="secondColumn firstRow firstGridColumn secondGridRow" />
-      <rect class="thirdColummn firstRow firstGridColumn secondGridRow" />
-      <rect class="firstColumn secondRow firstGridColumn secondGridRow" />
-      <rect class="secondColumn secondRow firstGridColumn secondGridRow" />
-      <rect class="thirdColummn secondRow firstGridColumn secondGridRow" />
-      <rect class="firstColumn thirdRow firstGridColumn secondGridRow" />
-      <rect class="secondColumn thirdRow firstGridColumn secondGridRow" />
-      <rect class="thirdColummn thirdRow firstGridColumn secondGridRow" />
-      <rect class="firstColumn firstRow secondGridColumn secondGridRow" />
-      <rect class="secondColumn firstRow secondGridColumn secondGridRow" />
-      <rect class="thirdColummn firstRow secondGridColumn secondGridRow" />
-      <rect class="firstColumn secondRow secondGridColumn secondGridRow" />
-      <rect class="secondColumn secondRow secondGridColumn secondGridRow" />
-      <rect class="thirdColummn secondRow secondGridColumn secondGridRow" />
-      <rect class="firstColumn thirdRow secondGridColumn secondGridRow" />
-      <rect class="secondColumn thirdRow secondGridColumn secondGridRow" />
-      <rect class="thirdColummn thirdRow secondGridColumn secondGridRow" />
-      <rect class="firstColumn firstRow thirdGridColumn secondGridRow" />
-      <rect class="secondColumn firstRow thirdGridColumn secondGridRow" />
-      <rect class="thirdColummn firstRow thirdGridColumn secondGridRow" />
-      <rect class="firstColumn secondRow thirdGridColumn secondGridRow" />
-      <rect class="secondColumn secondRow thirdGridColumn secondGridRow" />
-      <rect class="thirdColummn secondRow thirdGridColumn secondGridRow" />
-      <rect class="firstColumn thirdRow thirdGridColumn secondGridRow" />
-      <rect class="secondColumn thirdRow thirdGridColumn secondGridRow" />
-      <rect class="thirdColummn thirdRow thirdGridColumn secondGridRow" />
-      <rect class="firstColumn firstRow firstGridColumn thirdGridRow" />
-      <rect class="secondColumn firstRow firstGridColumn thirdGridRow" />
-      <rect class="thirdColummn firstRow firstGridColumn thirdGridRow" />
-      <rect class="firstColumn secondRow firstGridColumn thirdGridRow" />
-      <rect class="secondColumn secondRow firstGridColumn thirdGridRow" />
-      <rect class="thirdColummn secondRow firstGridColumn thirdGridRow" />
-      <rect class="firstColumn thirdRow firstGridColumn thirdGridRow" />
-      <rect class="secondColumn thirdRow firstGridColumn thirdGridRow" />
-      <rect class="thirdColummn thirdRow firstGridColumn thirdGridRow" />
-      <rect class="firstColumn firstRow secondGridColumn thirdGridRow" />
-      <rect class="secondColumn firstRow secondGridColumn thirdGridRow" />
-      <rect class="thirdColummn firstRow secondGridColumn thirdGridRow" />
-      <rect class="firstColumn secondRow secondGridColumn thirdGridRow" />
-      <rect class="secondColumn secondRow secondGridColumn thirdGridRow" />
-      <rect class="thirdColummn secondRow secondGridColumn thirdGridRow" />
-      <rect class="firstColumn thirdRow secondGridColumn thirdGridRow" />
-      <rect class="secondColumn thirdRow secondGridColumn thirdGridRow" />
-      <rect class="thirdColummn thirdRow secondGridColumn thirdGridRow" />
-      <rect class="firstColumn firstRow thirdGridColumn thirdGridRow" />
-      <rect class="secondColumn firstRow thirdGridColumn thirdGridRow" />
-      <rect class="thirdColummn firstRow thirdGridColumn thirdGridRow" />
-      <rect class="firstColumn secondRow thirdGridColumn thirdGridRow" />
-      <rect class="secondColumn secondRow thirdGridColumn thirdGridRow" />
-      <rect class="thirdColummn secondRow thirdGridColumn thirdGridRow" />
-      <rect class="firstColumn thirdRow thirdGridColumn thirdGridRow" />
-      <rect class="secondColumn thirdRow thirdGridColumn thirdGridRow" />
-      <rect class="thirdColummn thirdRow thirdGridColumn thirdGridRow" />
+      <g class="firstColumn firstRow firstGridColumn firstGridRow">
+        <rect></rect>
+        <text>7</text>
+      </g>
+      <g class="secondColumn firstRow firstGridColumn firstGridRow">
+        <rect></rect>
+        <text>3</text>
+      </g>
+      <g class="thirdColummn firstRow firstGridColumn firstGridRow">
+        <rect></rect>
+        <text>5</text>
+      </g>
+      <g class="firstColumn secondRow firstGridColumn firstGridRow">
+        <rect></rect>
+        <text>8</text>
+      </g>
+      <g class="secondColumn secondRow firstGridColumn firstGridRow">
+        <rect></rect>
+        <text>4</text>
+      </g>
+      <g class="thirdColummn secondRow firstGridColumn firstGridRow">
+        <rect></rect>
+        <text>2</text>
+      </g>
+      <g class="firstColumn thirdRow firstGridColumn firstGridRow">
+        <rect></rect>
+        <text>9</text>
+      </g>
+      <g class="secondColumn thirdRow firstGridColumn firstGridRow">
+        <rect></rect>
+        <text>6</text>
+      </g>
+      <g class="thirdColummn thirdRow firstGridColumn firstGridRow">
+        <rect></rect>
+        <text>1</text>
+      </g>
+      <g class="firstColumn firstRow secondGridColumn firstGridRow">
+        <rect></rect>
+        <text>6</text>
+      </g>
+      <g class="secondColumn firstRow secondGridColumn firstGridRow">
+        <rect></rect>
+        <text>1</text>
+      </g>
+      <g class="thirdColummn firstRow secondGridColumn firstGridRow">
+        <rect></rect>
+        <text>4</text>
+      </g>
+      <g class="firstColumn secondRow secondGridColumn firstGridRow">
+        <rect></rect>
+        <text>9</text>
+      </g>
+      <g class="secondColumn secondRow secondGridColumn firstGridRow">
+        <rect></rect>
+        <text>7</text>
+      </g>
+      <g class="thirdColummn secondRow secondGridColumn firstGridRow">
+        <rect></rect>
+        <text>3</text>
+      </g>
+      <g class="firstColumn thirdRow secondGridColumn firstGridRow">
+        <rect></rect>
+        <text>2</text>
+      </g>
+      <g class="secondColumn thirdRow secondGridColumn firstGridRow">
+        <rect></rect>
+        <text>8</text>
+      </g>
+      <g class="thirdColummn thirdRow secondGridColumn firstGridRow">
+        <rect></rect>
+        <text>5</text>
+      </g>
+      <g class="firstColumn firstRow thirdGridColumn firstGridRow">
+        <rect></rect>
+        <text>8</text>
+      </g>
+      <g class="secondColumn firstRow thirdGridColumn firstGridRow">
+        <rect></rect>
+        <text>9</text>
+      </g>
+      <g class="thirdColummn firstRow thirdGridColumn firstGridRow">
+        <rect></rect>
+        <text>2</text>
+      </g>
+      <g class="firstColumn secondRow thirdGridColumn firstGridRow">
+        <rect></rect>
+        <text>5</text>
+      </g>
+      <g class="secondColumn secondRow thirdGridColumn firstGridRow">
+        <rect></rect>
+        <text>6</text>
+      </g>
+      <g class="thirdColummn secondRow thirdGridColumn firstGridRow">
+        <rect></rect>
+        <text>1</text>
+      </g>
+      <g class="firstColumn thirdRow thirdGridColumn firstGridRow">
+        <rect></rect>
+        <text>3</text>
+      </g>
+      <g class="secondColumn thirdRow thirdGridColumn firstGridRow">
+        <rect></rect>
+        <text>7</text>
+      </g>
+      <g class="thirdColummn thirdRow thirdGridColumn firstGridRow">
+        <rect></rect>
+        <text>4</text>
+      </g>
+      <g class="firstColumn firstRow firstGridColumn secondGridRow">
+        <rect></rect>
+        <text>2</text>
+      </g>
+      <g class="secondColumn firstRow firstGridColumn secondGridRow">
+        <rect></rect>
+        <text>8</text>
+      </g>
+      <g class="thirdColummn firstRow firstGridColumn secondGridRow">
+        <rect></rect>
+        <text>6</text>
+      </g>
+      <g class="firstColumn secondRow firstGridColumn secondGridRow">
+        <rect></rect>
+        <text>4</text>
+      </g>
+      <g class="secondColumn secondRow firstGridColumn secondGridRow">
+        <rect></rect>
+        <text>1</text>
+      </g>
+      <g class="thirdColummn secondRow firstGridColumn secondGridRow">
+        <rect></rect>
+        <text>3</text>
+      </g>
+      <g class="firstColumn thirdRow firstGridColumn secondGridRow">
+        <rect></rect>
+        <text>5</text>
+      </g>
+      <g class="secondColumn thirdRow firstGridColumn secondGridRow">
+        <rect></rect>
+        <text>7</text>
+      </g>
+      <g class="thirdColummn thirdRow firstGridColumn secondGridRow">
+        <rect></rect>
+        <text>9</text>
+      </g>
+      <g class="firstColumn firstRow secondGridColumn secondGridRow">
+        <rect></rect>
+        <text>3</text>
+      </g>
+      <g class="secondColumn firstRow secondGridColumn secondGridRow">
+        <rect></rect>
+        <text>4</text>
+      </g>
+      <g class="thirdColummn firstRow secondGridColumn secondGridRow">
+        <rect></rect>
+        <text>9</text>
+      </g>
+      <g class="firstColumn secondRow secondGridColumn secondGridRow">
+        <rect></rect>
+        <text>8</text>
+      </g>
+      <g class="secondColumn secondRow secondGridColumn secondGridRow">
+        <rect></rect>
+        <text>5</text>
+      </g>
+      <g class="thirdColummn secondRow secondGridColumn secondGridRow">
+        <rect></rect>
+        <text>7</text>
+      </g>
+      <g class="firstColumn thirdRow secondGridColumn secondGridRow">
+        <rect></rect>
+        <text>1</text>
+      </g>
+      <g class="secondColumn thirdRow secondGridColumn secondGridRow">
+        <rect></rect>
+        <text>2</text>
+      </g>
+      <g class="thirdColummn thirdRow secondGridColumn secondGridRow">
+        <rect></rect>
+        <text>6</text>
+      </g>
+      <g class="firstColumn firstRow thirdGridColumn secondGridRow">
+        <rect></rect>
+        <text>1</text>
+      </g>
+      <g class="secondColumn firstRow thirdGridColumn secondGridRow">
+        <rect></rect>
+        <text>5</text>
+      </g>
+      <g class="thirdColummn firstRow thirdGridColumn secondGridRow">
+        <rect></rect>
+        <text>7</text>
+      </g>
+      <g class="firstColumn secondRow thirdGridColumn secondGridRow">
+        <rect></rect>
+        <text>9</text>
+      </g>
+      <g class="secondColumn secondRow thirdGridColumn secondGridRow">
+        <rect></rect>
+        <text>2</text>
+      </g>
+      <g class="thirdColummn secondRow thirdGridColumn secondGridRow">
+        <rect></rect>
+        <text>6</text>
+      </g>
+      <g class="firstColumn thirdRow thirdGridColumn secondGridRow">
+        <rect></rect>
+        <text>4</text>
+      </g>
+      <g class="secondColumn thirdRow thirdGridColumn secondGridRow">
+        <rect></rect>
+        <text>3</text>
+      </g>
+      <g class="thirdColummn thirdRow thirdGridColumn secondGridRow">
+        <rect></rect>
+        <text>8</text>
+      </g>
+      <g class="firstColumn firstRow firstGridColumn thirdGridRow">
+        <rect></rect>
+        <text>1</text>
+      </g>
+      <g class="secondColumn firstRow firstGridColumn thirdGridRow">
+        <rect></rect>
+        <text>5</text>
+      </g>
+      <g class="thirdColummn firstRow firstGridColumn thirdGridRow">
+        <rect></rect>
+        <text>7</text>
+      </g>
+      <g class="firstColumn secondRow firstGridColumn thirdGridRow">
+        <rect></rect>
+        <text>6</text>
+      </g>
+      <g class="secondColumn secondRow firstGridColumn thirdGridRow">
+        <rect></rect>
+        <text>9</text>
+      </g>
+      <g class="thirdColummn secondRow firstGridColumn thirdGridRow">
+        <rect></rect>
+        <text>4</text>
+      </g>
+      <g class="firstColumn thirdRow firstGridColumn thirdGridRow">
+        <rect></rect>
+        <text>3</text>
+      </g>
+      <g class="secondColumn thirdRow firstGridColumn thirdGridRow">
+        <rect></rect>
+        <text>2</text>
+      </g>
+      <g class="thirdColummn thirdRow firstGridColumn thirdGridRow">
+        <rect></rect>
+        <text>8</text>
+      </g>
+      <g class="firstColumn firstRow secondGridColumn thirdGridRow">
+        <rect></rect>
+        <text>4</text>
+      </g>
+      <g class="secondColumn firstRow secondGridColumn thirdGridRow">
+        <rect></rect>
+        <text>9</text>
+      </g>
+      <g class="thirdColummn firstRow secondGridColumn thirdGridRow">
+        <rect></rect>
+        <text>2</text>
+      </g>
+      <g class="firstColumn secondRow secondGridColumn thirdGridRow">
+        <rect></rect>
+        <text>7</text>
+      </g>
+      <g class="secondColumn secondRow secondGridColumn thirdGridRow">
+        <rect></rect>
+        <text>3</text>
+      </g>
+      <g class="thirdColummn secondRow secondGridColumn thirdGridRow">
+        <rect></rect>
+        <text>8</text>
+      </g>
+      <g class="firstColumn thirdRow secondGridColumn thirdGridRow">
+        <rect></rect>
+        <text>5</text>
+      </g>
+      <g class="secondColumn thirdRow secondGridColumn thirdGridRow">
+        <rect></rect>
+        <text>6</text>
+      </g>
+      <g class="thirdColummn thirdRow secondGridColumn thirdGridRow">
+        <rect></rect>
+        <text>1</text>
+      </g>
+      <g class="firstColumn firstRow thirdGridColumn thirdGridRow">
+        <rect></rect>
+        <text>6</text>
+      </g>
+      <g class="secondColumn firstRow thirdGridColumn thirdGridRow">
+        <rect></rect>
+        <text>8</text>
+      </g>
+      <g class="thirdColummn firstRow thirdGridColumn thirdGridRow">
+        <rect></rect>
+        <text>3</text>
+      </g>
+      <g class="firstColumn secondRow thirdGridColumn thirdGridRow">
+        <rect></rect>
+        <text>2</text>
+      </g>
+      <g class="secondColumn secondRow thirdGridColumn thirdGridRow">
+        <rect></rect>
+        <text>1</text>
+      </g>
+      <g class="thirdColummn secondRow thirdGridColumn thirdGridRow">
+        <rect></rect>
+        <text>5</text>
+      </g>
+      <g class="firstColumn thirdRow thirdGridColumn thirdGridRow">
+        <rect></rect>
+        <text>7</text>
+      </g>
+      <g class="secondColumn thirdRow thirdGridColumn thirdGridRow">
+        <rect></rect>
+        <text>4</text>
+      </g>
+      <g class="thirdColummn thirdRow thirdGridColumn thirdGridRow">
+        <rect></rect>
+        <text>9</text>
+      </g>
     </svg>
     <script type="text/javascript">
-      // for a rectangle class in the document, get all classes of parent gs
-      const cells = Array.from(document.getElementsByTagName("rect"));
+      // for a gangle class in the document, get all classes of parent gs
+      const cells = Array.from(document.getElementsByTagName("g"));
       cells.forEach((cell) => {
         cell.addEventListener("mouseenter", function (event) {
           changeCells(this);
@@ -503,22 +759,22 @@
         });
       });
       function changeCells(clickedCell) {
-        var rectClassList = Array.from(clickedCell.classList);
+        var gClassList = Array.from(clickedCell.classList);
         cells.forEach((cell) => {
           var cellClassList = Array.from(cell.classList);
           // if the fourth is the same
-          if (cellClassList[3] == rectClassList[3]) {
+          if (cellClassList[3] == gClassList[3]) {
             // then the thrid is the same or the second
-            if (cellClassList[2] == rectClassList[2]) {
+            if (cellClassList[2] == gClassList[2]) {
               cell.style["fill"] = "green";
-            } else if (cellClassList[1] == rectClassList[1]) {
+            } else if (cellClassList[1] == gClassList[1]) {
               cell.style["fill"] = "orange";
             }
           }
           // if the third and first are the same
           else if (
-            cellClassList[2] == rectClassList[2] &&
-            cellClassList[0] == rectClassList[0]
+            cellClassList[2] == gClassList[2] &&
+            cellClassList[0] == gClassList[0]
           ) {
             cell.style["fill"] = "red";
           }

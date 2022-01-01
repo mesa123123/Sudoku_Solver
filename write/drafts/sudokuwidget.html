@@ -7,508 +7,501 @@
   </head>
   <body>
     <style type="text/css" media="screen">
+      :root {
+        --cellLength: 6%;
+      }
       svg rect {
         fill: none;
         stroke: black;
         stroke-width: 1px;
+        height: var(--cellLength);
+        width: var(--cellLength);
+      }
+      svg rect.firstColumn.firstRow.firstGridColumn.firstGridRow {
+        transform: translate(0%, 0%);
+      }
+      svg rect.secondColumn.firstRow.firstGridColumn.firstGridRow {
+        transform: translate(var(--cellLength), 0%);
+      }
+      svg rect.thirdColummn.firstRow.firstGridColumn.firstGridRow {
+        transform: translate(calc(2 * var(--cellLength)), 0%);
+      }
+      svg rect.firstColumn.secondRow.firstGridColumn.firstGridRow {
+        transform: translate(0%, var(--cellLength));
+      }
+      svg rect.secondColumn.secondRow.firstGridColumn.firstGridRow {
+        transform: translate(var(--cellLength), var(--cellLength));
+      }
+      svg rect.thirdColummn.secondRow.firstGridColumn.firstGridRow {
+        transform: translate(calc(2 * var(--cellLength)), var(--cellLength));
+      }
+      svg rect.firstColumn.thirdRow.firstGridColumn.firstGridRow {
+        transform: translate(0%, calc(2 * var(--cellLength)));
+      }
+      svg rect.secondColumn.thirdRow.firstGridColumn.firstGridRow {
+        transform: translate(var(--cellLength), calc(2 * var(--cellLength)));
+      }
+      svg rect.thirdColummn.thirdRow.firstGridColumn.firstGridRow {
+        transform: translate(
+          calc(2 * var(--cellLength)),
+          calc(2 * var(--cellLength))
+        );
+      }
+      svg rect.firstColumn.firstRow.secondGridColumn.firstGridRow {
+        transform: translate(calc(3 * var(--cellLength)), 0%);
+      }
+      svg rect.secondColumn.firstRow.secondGridColumn.firstGridRow {
+        transform: translate(calc(4 * var(--cellLength)), 0%);
+      }
+      svg rect.thirdColummn.firstRow.secondGridColumn.firstGridRow {
+        transform: translate(calc(5 * var(--cellLength)), 0%);
+      }
+      svg rect.firstColumn.secondRow.secondGridColumn.firstGridRow {
+        transform: translate(calc(3 * var(--cellLength)), var(--cellLength));
+      }
+      svg rect.secondColumn.secondRow.secondGridColumn.firstGridRow {
+        transform: translate(calc(4 * var(--cellLength)), var(--cellLength));
+      }
+      svg rect.thirdColummn.secondRow.secondGridColumn.firstGridRow {
+        transform: translate(calc(5 * var(--cellLength)), var(--cellLength));
+      }
+      svg rect.firstColumn.thirdRow.secondGridColumn.firstGridRow {
+        transform: translate(
+          calc(3 * var(--cellLength)),
+          calc(2 * var(--cellLength))
+        );
+      }
+      svg rect.secondColumn.thirdRow.secondGridColumn.firstGridRow {
+        transform: translate(
+          calc(4 * var(--cellLength)),
+          calc(2 * var(--cellLength))
+        );
+      }
+      svg rect.thirdColummn.thirdRow.secondGridColumn.firstGridRow {
+        transform: translate(
+          calc(5 * var(--cellLength)),
+          calc(2 * var(--cellLength))
+        );
+      }
+      svg rect.firstColumn.firstRow.thirdGridColumn.firstGridRow {
+        transform: translate(calc(6 * var(--cellLength)), 0%);
+      }
+      svg rect.secondColumn.firstRow.thirdGridColumn.firstGridRow {
+        transform: translate(calc(7 * var(--cellLength)), 0%);
+      }
+      svg rect.thirdColummn.firstRow.thirdGridColumn.firstGridRow {
+        transform: translate(calc(8 * var(--cellLength)), 0%);
+      }
+      svg rect.firstColumn.secondRow.thirdGridColumn.firstGridRow {
+        transform: translate(calc(6 * var(--cellLength)), var(--cellLength));
+      }
+      svg rect.secondColumn.secondRow.thirdGridColumn.firstGridRow {
+        transform: translate(calc(7 * var(--cellLength)), var(--cellLength));
+      }
+      svg rect.thirdColummn.secondRow.thirdGridColumn.firstGridRow {
+        transform: translate(calc(8 * var(--cellLength)), var(--cellLength));
+      }
+      svg rect.firstColumn.thirdRow.thirdGridColumn.firstGridRow {
+        transform: translate(
+          calc(6 * var(--cellLength)),
+          calc(2 * var(--cellLength))
+        );
+      }
+      svg rect.secondColumn.thirdRow.thirdGridColumn.firstGridRow {
+        transform: translate(
+          calc(7 * var(--cellLength)),
+          calc(2 * var(--cellLength))
+        );
+      }
+      svg rect.thirdColummn.thirdRow.thirdGridColumn.firstGridRow {
+        transform: translate(
+          calc(8 * var(--cellLength)),
+          calc(2 * var(--cellLength))
+        );
+      }
+      svg rect.firstColumn.firstRow.firstGridColumn.secondGridRow {
+        transform: translate(0%, calc(3 * var(--cellLength)));
+      }
+      svg rect.secondColumn.firstRow.firstGridColumn.secondGridRow {
+        transform: translate(var(--cellLength), calc(3 * var(--cellLength)));
+      }
+      svg rect.thirdColummn.firstRow.firstGridColumn.secondGridRow {
+        transform: translate(
+          calc(2 * var(--cellLength)),
+          calc(3 * var(--cellLength))
+        );
+      }
+      svg rect.firstColumn.secondRow.firstGridColumn.secondGridRow {
+        transform: translate(0%, calc(4 * var(--cellLength)));
+      }
+      svg rect.secondColumn.secondRow.firstGridColumn.secondGridRow {
+        transform: translate(var(--cellLength), calc(4 * var(--cellLength)));
+      }
+      svg rect.thirdColummn.secondRow.firstGridColumn.secondGridRow {
+        transform: translate(
+          calc(2 * var(--cellLength)),
+          calc(4 * var(--cellLength))
+        );
+      }
+      svg rect.firstColumn.thirdRow.firstGridColumn.secondGridRow {
+        transform: translate(0%, calc(5 * var(--cellLength)));
+      }
+      svg rect.secondColumn.thirdRow.firstGridColumn.secondGridRow {
+        transform: translate(var(--cellLength), calc(5 * var(--cellLength)));
+      }
+      svg rect.thirdColummn.thirdRow.firstGridColumn.secondGridRow {
+        transform: translate(
+          calc(2 * var(--cellLength)),
+          calc(5 * var(--cellLength))
+        );
+      }
+      svg rect.firstColumn.firstRow.secondGridColumn.secondGridRow {
+        transform: translate(
+          calc(3 * var(--cellLength)),
+          calc(3 * var(--cellLength))
+        );
+      }
+      svg rect.secondColumn.firstRow.secondGridColumn.secondGridRow {
+        transform: translate(
+          calc(4 * var(--cellLength)),
+          calc(3 * var(--cellLength))
+        );
+      }
+      svg rect.thirdColummn.firstRow.secondGridColumn.secondGridRow {
+        transform: translate(
+          calc(5 * var(--cellLength)),
+          calc(3 * var(--cellLength))
+        );
+      }
+      svg rect.firstColumn.secondRow.secondGridColumn.secondGridRow {
+        transform: translate(
+          calc(3 * var(--cellLength)),
+          calc(4 * var(--cellLength))
+        );
+      }
+      svg rect.secondColumn.secondRow.secondGridColumn.secondGridRow {
+        transform: translate(
+          calc(4 * var(--cellLength)),
+          calc(4 * var(--cellLength))
+        );
+      }
+      svg rect.thirdColummn.secondRow.secondGridColumn.secondGridRow {
+        transform: translate(
+          calc(5 * var(--cellLength)),
+          calc(4 * var(--cellLength))
+        );
+      }
+      svg rect.firstColumn.thirdRow.secondGridColumn.secondGridRow {
+        transform: translate(
+          calc(3 * var(--cellLength)),
+          calc(5 * var(--cellLength))
+        );
+      }
+      svg rect.secondColumn.thirdRow.secondGridColumn.secondGridRow {
+        transform: translate(
+          calc(4 * var(--cellLength)),
+          calc(5 * var(--cellLength))
+        );
+      }
+      svg rect.thirdColummn.thirdRow.secondGridColumn.secondGridRow {
+        transform: translate(
+          calc(5 * var(--cellLength)),
+          calc(5 * var(--cellLength))
+        );
+      }
+      svg rect.firstColumn.firstRow.thirdGridColumn.secondGridRow {
+        transform: translate(
+          calc(6 * var(--cellLength)),
+          calc(3 * var(--cellLength))
+        );
+      }
+      svg rect.secondColumn.firstRow.thirdGridColumn.secondGridRow {
+        transform: translate(
+          calc(7 * var(--cellLength)),
+          calc(3 * var(--cellLength))
+        );
+      }
+      svg rect.thirdColummn.firstRow.thirdGridColumn.secondGridRow {
+        transform: translate(
+          calc(8 * var(--cellLength)),
+          calc(3 * var(--cellLength))
+        );
+      }
+      svg rect.firstColumn.secondRow.thirdGridColumn.secondGridRow {
+        transform: translate(
+          calc(6 * var(--cellLength)),
+          calc(4 * var(--cellLength))
+        );
+      }
+      svg rect.secondColumn.secondRow.thirdGridColumn.secondGridRow {
+        transform: translate(
+          calc(7 * var(--cellLength)),
+          calc(4 * var(--cellLength))
+        );
+      }
+      svg rect.thirdColummn.secondRow.thirdGridColumn.secondGridRow {
+        transform: translate(
+          calc(8 * var(--cellLength)),
+          calc(4 * var(--cellLength))
+        );
+      }
+      svg rect.firstColumn.thirdRow.thirdGridColumn.secondGridRow {
+        transform: translate(
+          calc(6 * var(--cellLength)),
+          calc(5 * var(--cellLength))
+        );
+      }
+      svg rect.secondColumn.thirdRow.thirdGridColumn.secondGridRow {
+        transform: translate(
+          calc(7 * var(--cellLength)),
+          calc(5 * var(--cellLength))
+        );
+      }
+      svg rect.thirdColummn.thirdRow.thirdGridColumn.secondGridRow {
+        transform: translate(
+          calc(8 * var(--cellLength)),
+          calc(5 * var(--cellLength))
+        );
+      }
+      svg rect.firstColumn.firstRow.firstGridColumn.thirdGridRow {
+        transform: translate(0%, calc(6 * var(--cellLength)));
+      }
+      svg rect.secondColumn.firstRow.firstGridColumn.thirdGridRow {
+        transform: translate(var(--cellLength), calc(6 * var(--cellLength)));
+      }
+      svg rect.thirdColummn.firstRow.firstGridColumn.thirdGridRow {
+        transform: translate(
+          calc(2 * var(--cellLength)),
+          calc(6 * var(--cellLength))
+        );
+      }
+      svg rect.firstColumn.secondRow.firstGridColumn.thirdGridRow {
+        transform: translate(0%, calc(7 * var(--cellLength)));
+      }
+      svg rect.secondColumn.secondRow.firstGridColumn.thirdGridRow {
+        transform: translate(var(--cellLength), calc(7 * var(--cellLength)));
+      }
+      svg rect.thirdColummn.secondRow.firstGridColumn.thirdGridRow {
+        transform: translate(
+          calc(2 * var(--cellLength)),
+          calc(7 * var(--cellLength))
+        );
+      }
+      svg rect.firstColumn.thirdRow.firstGridColumn.thirdGridRow {
+        transform: translate(0%, calc(8 * var(--cellLength)));
+      }
+      svg rect.secondColumn.thirdRow.firstGridColumn.thirdGridRow {
+        transform: translate(var(--cellLength), calc(8 * var(--cellLength)));
+      }
+      svg rect.thirdColummn.thirdRow.firstGridColumn.thirdGridRow {
+        transform: translate(
+          calc(2 * var(--cellLength)),
+          calc(8 * var(--cellLength))
+        );
+      }
+      svg rect.firstColumn.firstRow.secondGridColumn.thirdGridRow {
+        transform: translate(
+          calc(3 * var(--cellLength)),
+          calc(6 * var(--cellLength))
+        );
+      }
+      svg rect.secondColumn.firstRow.secondGridColumn.thirdGridRow {
+        transform: translate(
+          calc(4 * var(--cellLength)),
+          calc(6 * var(--cellLength))
+        );
+      }
+      svg rect.thirdColummn.firstRow.secondGridColumn.thirdGridRow {
+        transform: translate(
+          calc(5 * var(--cellLength)),
+          calc(6 * var(--cellLength))
+        );
+      }
+      svg rect.firstColumn.secondRow.secondGridColumn.thirdGridRow {
+        transform: translate(
+          calc(3 * var(--cellLength)),
+          calc(7 * var(--cellLength))
+        );
+      }
+      svg rect.secondColumn.secondRow.secondGridColumn.thirdGridRow {
+        transform: translate(
+          calc(4 * var(--cellLength)),
+          calc(7 * var(--cellLength))
+        );
+      }
+      svg rect.thirdColummn.secondRow.secondGridColumn.thirdGridRow {
+        transform: translate(
+          calc(5 * var(--cellLength)),
+          calc(7 * var(--cellLength))
+        );
+      }
+      svg rect.firstColumn.thirdRow.secondGridColumn.thirdGridRow {
+        transform: translate(
+          calc(3 * var(--cellLength)),
+          calc(8 * var(--cellLength))
+        );
+      }
+      svg rect.secondColumn.thirdRow.secondGridColumn.thirdGridRow {
+        transform: translate(
+          calc(4 * var(--cellLength)),
+          calc(8 * var(--cellLength))
+        );
+      }
+      svg rect.thirdColummn.thirdRow.secondGridColumn.thirdGridRow {
+        transform: translate(
+          calc(5 * var(--cellLength)),
+          calc(8 * var(--cellLength))
+        );
+      }
+      svg rect.firstColumn.firstRow.thirdGridColumn.thirdGridRow {
+        transform: translate(
+          calc(6 * var(--cellLength)),
+          calc(6 * var(--cellLength))
+        );
+      }
+      svg rect.secondColumn.firstRow.thirdGridColumn.thirdGridRow {
+        transform: translate(
+          calc(7 * var(--cellLength)),
+          calc(6 * var(--cellLength))
+        );
+      }
+      svg rect.thirdColummn.firstRow.thirdGridColumn.thirdGridRow {
+        transform: translate(
+          calc(8 * var(--cellLength)),
+          calc(6 * var(--cellLength))
+        );
+      }
+      svg rect.firstColumn.secondRow.thirdGridColumn.thirdGridRow {
+        transform: translate(
+          calc(6 * var(--cellLength)),
+          calc(7 * var(--cellLength))
+        );
+      }
+      svg rect.secondColumn.secondRow.thirdGridColumn.thirdGridRow {
+        transform: translate(
+          calc(7 * var(--cellLength)),
+          calc(7 * var(--cellLength))
+        );
+      }
+      svg rect.thirdColummn.secondRow.thirdGridColumn.thirdGridRow {
+        transform: translate(
+          calc(8 * var(--cellLength)),
+          calc(7 * var(--cellLength))
+        );
+      }
+      svg rect.firstColumn.thirdRow.thirdGridColumn.thirdGridRow {
+        transform: translate(
+          calc(6 * var(--cellLength)),
+          calc(8 * var(--cellLength))
+        );
+      }
+      svg rect.secondColumn.thirdRow.thirdGridColumn.thirdGridRow {
+        transform: translate(
+          calc(7 * var(--cellLength)),
+          calc(8 * var(--cellLength))
+        );
+      }
+      svg rect.thirdColummn.thirdRow.thirdGridColumn.thirdGridRow {
+        transform: translate(
+          calc(8 * var(--cellLength)),
+          calc(8 * var(--cellLength))
+        );
       }
     </style>
-    <svg height="50vh" width="50vh">
-      <rect
-        class="firstColumn firstRow firstGridColumn firstGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(0%, 0%)"
-      />
-      <rect
-        class="secondColumn firstRow firstGridColumn firstGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(5%, 0%)"
-      />
-      <rect
-        class="thirdColummn firstRow firstGridColumn firstGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(10%, 0%)"
-      />
-      <rect
-        class="firstColumn secondRow firstGridColumn firstGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(0%, 5%)"
-      />
-      <rect
-        class="secondColumn secondRow firstGridColumn firstGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(5%, 5%)"
-      />
-      <rect
-        class="thirdColummn secondRow firstGridColumn firstGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(10%, 5%)"
-      />
-      <rect
-        class="firstColumn thirdRow firstGridColumn firstGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(0%, 10%)"
-      />
-      <rect
-        class="secondColumn thirdRow firstGridColumn firstGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(5%, 10%)"
-      />
-      <rect
-        class="thirdColummn thirdRow firstGridColumn firstGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(10%, 10%)"
-      />
-      <rect
-        class="firstColumn firstRow secondGridColumn firstGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(15%, 0%)"
-      />
-      <rect
-        class="secondColumn firstRow secondGridColumn firstGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(20%, 0%)"
-      />
-      <rect
-        class="thirdColummn firstRow secondGridColumn firstGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(25%, 0%)"
-      />
-      <rect
-        class="firstColumn secondRow secondGridColumn firstGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(15%, 5%)"
-      />
-      <rect
-        class="secondColumn secondRow secondGridColumn firstGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(20%, 5%)"
-      />
-      <rect
-        class="thirdColummn secondRow secondGridColumn firstGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(25%, 5%)"
-      />
-      <rect
-        class="firstColumn thirdRow secondGridColumn firstGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(15%, 10%)"
-      />
-      <rect
-        class="secondColumn thirdRow secondGridColumn firstGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(20%, 10%)"
-      />
-      <rect
-        class="thirdColummn thirdRow secondGridColumn firstGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(25%, 10%)"
-      />
-      <rect
-        class="firstColumn firstRow thirdGridColumn firstGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(30%, 0%)"
-      />
-      <rect
-        class="secondColumn firstRow thirdGridColumn firstGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(35%, 0%)"
-      />
-      <rect
-        class="thirdColummn firstRow thirdGridColumn firstGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(40%, 0%)"
-      />
-      <rect
-        class="firstColumn secondRow thirdGridColumn firstGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(30%, 5%)"
-      />
-      <rect
-        class="secondColumn secondRow thirdGridColumn firstGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(35%, 5%)"
-      />
-      <rect
-        class="thirdColummn secondRow thirdGridColumn firstGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(40%, 5%)"
-      />
-      <rect
-        class="firstColumn thirdRow thirdGridColumn firstGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(30%, 10%)"
-      />
-      <rect
-        class="secondColumn thirdRow thirdGridColumn firstGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(35%, 10%)"
-      />
-      <rect
-        class="thirdColummn thirdRow thirdGridColumn firstGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(40%, 10%)"
-      />
-      <rect
-        class="firstColumn firstRow firstGridColumn secondGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(0%, 15%)"
-      />
-      <rect
-        class="secondColumn firstRow firstGridColumn secondGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(5%, 15%)"
-      />
-      <rect
-        class="thirdColummn firstRow firstGridColumn secondGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(10%, 15%)"
-      />
-      <rect
-        class="firstColumn secondRow firstGridColumn secondGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(0%, 20%)"
-      />
-      <rect
-        class="secondColumn secondRow firstGridColumn secondGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(5%, 20%)"
-      />
-      <rect
-        class="thirdColummn secondRow firstGridColumn secondGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(10%, 20%)"
-      />
-      <rect
-        class="firstColumn thirdRow firstGridColumn secondGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(0%, 25%)"
-      />
-      <rect
-        class="secondColumn thirdRow firstGridColumn secondGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(5%, 25%)"
-      />
-      <rect
-        class="thirdColummn thirdRow firstGridColumn secondGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(10%, 25%)"
-      />
-      <rect
-        class="firstColumn firstRow secondGridColumn secondGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(15%, 15%)"
-      />
-      <rect
-        class="secondColumn firstRow secondGridColumn secondGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(20%, 15%)"
-      />
-      <rect
-        class="thirdColummn firstRow secondGridColumn secondGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(25%, 15%)"
-      />
-      <rect
-        class="firstColumn secondRow secondGridColumn secondGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(15%, 20%)"
-      />
-      <rect
-        class="secondColumn secondRow secondGridColumn secondGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(20%, 20%)"
-      />
-      <rect
-        class="thirdColummn secondRow secondGridColumn secondGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(25%, 20%)"
-      />
-      <rect
-        class="firstColumn thirdRow secondGridColumn secondGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(15%, 25%)"
-      />
-      <rect
-        class="secondColumn thirdRow secondGridColumn secondGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(20%, 25%)"
-      />
-      <rect
-        class="thirdColummn thirdRow secondGridColumn secondGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(25%, 25%)"
-      />
-      <rect
-        class="firstColumn firstRow thirdGridColumn secondGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(30%, 15%)"
-      />
-      <rect
-        class="secondColumn firstRow thirdGridColumn secondGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(35%, 15%)"
-      />
-      <rect
-        class="thirdColummn firstRow thirdGridColumn secondGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(40%, 15%)"
-      />
-      <rect
-        class="firstColumn secondRow thirdGridColumn secondGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(30%, 20%)"
-      />
-      <rect
-        class="secondColumn secondRow thirdGridColumn secondGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(35%, 20%)"
-      />
-      <rect
-        class="thirdColummn secondRow thirdGridColumn secondGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(40%, 20%)"
-      />
-      <rect
-        class="firstColumn thirdRow thirdGridColumn secondGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(30%, 25%)"
-      />
-      <rect
-        class="secondColumn thirdRow thirdGridColumn secondGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(35%, 25%)"
-      />
-      <rect
-        class="thirdColummn thirdRow thirdGridColumn secondGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(40%, 25%)"
-      />
-      <rect
-        class="firstColumn firstRow firstGridColumn thirdGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(0%, 30%)"
-      />
-      <rect
-        class="secondColumn firstRow firstGridColumn thirdGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(5%, 30%)"
-      />
-      <rect
-        class="thirdColummn firstRow firstGridColumn thirdGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(10%, 30%)"
-      />
-      <rect
-        class="firstColumn secondRow firstGridColumn thirdGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(0%, 35%)"
-      />
-      <rect
-        class="secondColumn secondRow firstGridColumn thirdGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(5%, 35%)"
-      />
-      <rect
-        class="thirdColummn secondRow firstGridColumn thirdGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(10%, 35%)"
-      />
-      <rect
-        class="firstColumn thirdRow firstGridColumn thirdGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(0%, 40%)"
-      />
-      <rect
-        class="secondColumn thirdRow firstGridColumn thirdGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(5%, 40%)"
-      />
-      <rect
-        class="thirdColummn thirdRow firstGridColumn thirdGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(10%, 40%)"
-      />
-      <rect
-        class="firstColumn firstRow secondGridColumn thirdGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(15%, 30%)"
-      />
-      <rect
-        class="secondColumn firstRow secondGridColumn thirdGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(20%, 30%)"
-      />
-      <rect
-        class="thirdColummn firstRow secondGridColumn thirdGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(25%, 30%)"
-      />
-      <rect
-        class="firstColumn secondRow secondGridColumn thirdGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(15%, 35%)"
-      />
-      <rect
-        class="secondColumn secondRow secondGridColumn thirdGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(20%, 35%)"
-      />
-      <rect
-        class="thirdColummn secondRow secondGridColumn thirdGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(25%, 35%)"
-      />
-      <rect
-        class="firstColumn thirdRow secondGridColumn thirdGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(15%, 40%)"
-      />
-      <rect
-        class="secondColumn thirdRow secondGridColumn thirdGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(20%, 40%)"
-      />
-      <rect
-        class="thirdColummn thirdRow secondGridColumn thirdGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(25%, 40%)"
-      />
-      <!-- FinishedGridHere -->
-      <rect
-        class="firstColumn firstRow thirdGridColumn thirdGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(30%, 30%)"
-      />
-      <rect
-        class="secondColumn firstRow thirdGridColumn thirdGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(35%, 30%)"
-      />
-      <rect
-        class="thirdColummn firstRow thirdGridColumn thirdGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(40%, 30%)"
-      />
-      <rect
-        class="firstColumn secondRow thirdGridColumn thirdGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(30%, 35%)"
-      />
-      <rect
-        class="secondColumn secondRow thirdGridColumn thirdGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(35%, 35%)"
-      />
-      <rect
-        class="thirdColummn secondRow thirdGridColumn thirdGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(40%, 35%)"
-      />
-      <rect
-        class="firstColumn thirdRow thirdGridColumn thirdGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(30%, 40%)"
-      />
-      <rect
-        class="secondColumn thirdRow thirdGridColumn thirdGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(35%, 40%)"
-      />
-      <rect
-        class="thirdColummn thirdRow thirdGridColumn thirdGridRow"
-        height="5%"
-        width="5%"
-        style="transform: translate(40%, 40%)"
-      />
+    <svg height="80vh" width="80vh">
+      <rect class="firstColumn firstRow firstGridColumn firstGridRow" />
+      <rect class="secondColumn firstRow firstGridColumn firstGridRow" />
+      <rect class="thirdColummn firstRow firstGridColumn firstGridRow" />
+      <rect class="firstColumn secondRow firstGridColumn firstGridRow" />
+      <rect class="secondColumn secondRow firstGridColumn firstGridRow" />
+      <rect class="thirdColummn secondRow firstGridColumn firstGridRow" />
+      <rect class="firstColumn thirdRow firstGridColumn firstGridRow" />
+      <rect class="secondColumn thirdRow firstGridColumn firstGridRow" />
+      <rect class="thirdColummn thirdRow firstGridColumn firstGridRow" />
+      <rect class="firstColumn firstRow secondGridColumn firstGridRow" />
+      <rect class="secondColumn firstRow secondGridColumn firstGridRow" />
+      <rect class="thirdColummn firstRow secondGridColumn firstGridRow" />
+      <rect class="firstColumn secondRow secondGridColumn firstGridRow" />
+      <rect class="secondColumn secondRow secondGridColumn firstGridRow" />
+      <rect class="thirdColummn secondRow secondGridColumn firstGridRow" />
+      <rect class="firstColumn thirdRow secondGridColumn firstGridRow" />
+      <rect class="secondColumn thirdRow secondGridColumn firstGridRow" />
+      <rect class="thirdColummn thirdRow secondGridColumn firstGridRow" />
+      <rect class="firstColumn firstRow thirdGridColumn firstGridRow" />
+      <rect class="secondColumn firstRow thirdGridColumn firstGridRow" />
+      <rect class="thirdColummn firstRow thirdGridColumn firstGridRow" />
+      <rect class="firstColumn secondRow thirdGridColumn firstGridRow" />
+      <rect class="secondColumn secondRow thirdGridColumn firstGridRow" />
+      <rect class="thirdColummn secondRow thirdGridColumn firstGridRow" />
+      <rect class="firstColumn thirdRow thirdGridColumn firstGridRow" />
+      <rect class="secondColumn thirdRow thirdGridColumn firstGridRow" />
+      <rect class="thirdColummn thirdRow thirdGridColumn firstGridRow" />
+      <rect class="firstColumn firstRow firstGridColumn secondGridRow" />
+      <rect class="secondColumn firstRow firstGridColumn secondGridRow" />
+      <rect class="thirdColummn firstRow firstGridColumn secondGridRow" />
+      <rect class="firstColumn secondRow firstGridColumn secondGridRow" />
+      <rect class="secondColumn secondRow firstGridColumn secondGridRow" />
+      <rect class="thirdColummn secondRow firstGridColumn secondGridRow" />
+      <rect class="firstColumn thirdRow firstGridColumn secondGridRow" />
+      <rect class="secondColumn thirdRow firstGridColumn secondGridRow" />
+      <rect class="thirdColummn thirdRow firstGridColumn secondGridRow" />
+      <rect class="firstColumn firstRow secondGridColumn secondGridRow" />
+      <rect class="secondColumn firstRow secondGridColumn secondGridRow" />
+      <rect class="thirdColummn firstRow secondGridColumn secondGridRow" />
+      <rect class="firstColumn secondRow secondGridColumn secondGridRow" />
+      <rect class="secondColumn secondRow secondGridColumn secondGridRow" />
+      <rect class="thirdColummn secondRow secondGridColumn secondGridRow" />
+      <rect class="firstColumn thirdRow secondGridColumn secondGridRow" />
+      <rect class="secondColumn thirdRow secondGridColumn secondGridRow" />
+      <rect class="thirdColummn thirdRow secondGridColumn secondGridRow" />
+      <rect class="firstColumn firstRow thirdGridColumn secondGridRow" />
+      <rect class="secondColumn firstRow thirdGridColumn secondGridRow" />
+      <rect class="thirdColummn firstRow thirdGridColumn secondGridRow" />
+      <rect class="firstColumn secondRow thirdGridColumn secondGridRow" />
+      <rect class="secondColumn secondRow thirdGridColumn secondGridRow" />
+      <rect class="thirdColummn secondRow thirdGridColumn secondGridRow" />
+      <rect class="firstColumn thirdRow thirdGridColumn secondGridRow" />
+      <rect class="secondColumn thirdRow thirdGridColumn secondGridRow" />
+      <rect class="thirdColummn thirdRow thirdGridColumn secondGridRow" />
+      <rect class="firstColumn firstRow firstGridColumn thirdGridRow" />
+      <rect class="secondColumn firstRow firstGridColumn thirdGridRow" />
+      <rect class="thirdColummn firstRow firstGridColumn thirdGridRow" />
+      <rect class="firstColumn secondRow firstGridColumn thirdGridRow" />
+      <rect class="secondColumn secondRow firstGridColumn thirdGridRow" />
+      <rect class="thirdColummn secondRow firstGridColumn thirdGridRow" />
+      <rect class="firstColumn thirdRow firstGridColumn thirdGridRow" />
+      <rect class="secondColumn thirdRow firstGridColumn thirdGridRow" />
+      <rect class="thirdColummn thirdRow firstGridColumn thirdGridRow" />
+      <rect class="firstColumn firstRow secondGridColumn thirdGridRow" />
+      <rect class="secondColumn firstRow secondGridColumn thirdGridRow" />
+      <rect class="thirdColummn firstRow secondGridColumn thirdGridRow" />
+      <rect class="firstColumn secondRow secondGridColumn thirdGridRow" />
+      <rect class="secondColumn secondRow secondGridColumn thirdGridRow" />
+      <rect class="thirdColummn secondRow secondGridColumn thirdGridRow" />
+      <rect class="firstColumn thirdRow secondGridColumn thirdGridRow" />
+      <rect class="secondColumn thirdRow secondGridColumn thirdGridRow" />
+      <rect class="thirdColummn thirdRow secondGridColumn thirdGridRow" />
+      <rect class="firstColumn firstRow thirdGridColumn thirdGridRow" />
+      <rect class="secondColumn firstRow thirdGridColumn thirdGridRow" />
+      <rect class="thirdColummn firstRow thirdGridColumn thirdGridRow" />
+      <rect class="firstColumn secondRow thirdGridColumn thirdGridRow" />
+      <rect class="secondColumn secondRow thirdGridColumn thirdGridRow" />
+      <rect class="thirdColummn secondRow thirdGridColumn thirdGridRow" />
+      <rect class="firstColumn thirdRow thirdGridColumn thirdGridRow" />
+      <rect class="secondColumn thirdRow thirdGridColumn thirdGridRow" />
+      <rect class="thirdColummn thirdRow thirdGridColumn thirdGridRow" />
     </svg>
     <script type="text/javascript">
       // for a rectangle class in the document, get all classes of parent gs
       const cells = Array.from(document.getElementsByTagName("rect"));
-      cells.forEach(cell => {
-        cell.addEventListener("mouseenter", function(event) { changeCells(this) });
-          cell.addEventListener("mouseout", function(event) { changeCellsBack() });
-      })
+      cells.forEach((cell) => {
+        cell.addEventListener("mouseenter", function (event) {
+          changeCells(this);
+        });
+        cell.addEventListener("mouseout", function (event) {
+          changeCellsBack();
+        });
+      });
       function changeCells(clickedCell) {
         var rectClassList = Array.from(clickedCell.classList);
         cells.forEach((cell) => {
@@ -530,10 +523,12 @@
             cell.style["fill"] = "red";
           }
         });
-        clickedCell.style["fill"] = 'black'
+        clickedCell.style["fill"] = "black";
       }
       function changeCellsBack() {
-          cells.forEach((cell) => { cell.style["fill"] = "white"; })
+        cells.forEach((cell) => {
+          cell.style["fill"] = "white";
+        });
       }
     </script>
   </body>

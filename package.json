@@ -1,0 +1,26 @@
+{
+  "name": "sudokusolver",
+  "version": "1.0.0",
+  "description": "blog post to solve sudokus for me",
+  "main": "main.ts",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mesa123123/Sudoku_Solver.git"
+  },
+  "author": "Peter Bowman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mesa123123/Sudoku_Solver/issues"
+  },
+  "homepage": "https://github.com/mesa123123/Sudoku_Solver#readme",
+  "devDependencies": {
+    "typescript": "^4.5.4"
+  }
+}

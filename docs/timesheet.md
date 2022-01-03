@@ -37,3 +37,9 @@ The purpose of this document is to log time spent on the technical test for Rush
 | Date - Time | Progress Achieved | Activity Breakdown                  | Lessons Learned | LADRs Written |
 | ----------- | ----------------- | ----------------------------------- | --------------- | ------------- |
 | 1.1.22 1400 | 1.1.2 (/)         | Completed Writing On Sudoku Primers | n/a             | 003           |
+
+
+| Date - Time | Progress Achieved | Activity Breakdown | Lessons Learned | LADRs Written |
+| --- | --- | --- | --- | --- |
+| 3.1.22 2205 | 2.1 (t), 2.2 (t) | Made the classes for the grid and square on the main solver, installed jest for typescript  | how to set up jest with typescript (which isn't actually too hard but could be great to look into how those packages work and what they do) | n/a |
+

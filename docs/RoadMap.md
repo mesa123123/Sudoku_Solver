@@ -14,13 +14,13 @@
    5. Subtask - GUI Display (\*)
    6. Subtask - Limitations to the Solving Technique, and where to go from here (\*)
 
-2. Solver Programme (\*)
-   1. Game Object (\*)
+2. Solver Programme (d)
+   1. Game Object (t)
       - Subtask - solve method (\*)
       - Subtask - game state, set and get (\*)
-   2. Cell Object (\*)
-      - Subtask - current value (\*)
-      - Subtask - possible values (\*)
+   2. Cell Object (t)
+      - Subtask - current value (t)
+      - Subtask - possible values (t)
 
 ### Scope Creep
 

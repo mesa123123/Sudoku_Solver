@@ -43,3 +43,8 @@ The purpose of this document is to log time spent on the technical test for Rush
 | --- | --- | --- | --- | --- |
 | 3.1.22 2205 | 2.1 (t), 2.2 (t) | Made the classes for the grid and square on the main solver, installed jest for typescript  | how to set up jest with typescript (which isn't actually too hard but could be great to look into how those packages work and what they do) | n/a |
 
+
+| Date - Time | Progress Achieved | Activity Breakdown | Lessons Learned | LADRs Written |
+| --- | --- | --- | --- | --- |
+| 05.01.22 2258 | 2. all in dev or test...  | Wrote solver methods, and questioned design of the actual algorithms to see what would work best in that case  | Currying and SOLID patterns need reviewing  |  n/a |
+

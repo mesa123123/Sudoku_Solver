@@ -16,16 +16,20 @@
 
 2. Solver Programme (d)
    1. Game Object (t)
-      - Subtask - solve method (\*)
-      - Subtask - game state, set and get (\*)
+      1. Subtask - solve method (d)
+         - Perhaps make each type of solve method one function within the game object
+      2. Subtask - game state (t)
+          - set (t) - this is completed in the constructor
+          - get (t)
    2. Cell Object (t)
-      - Subtask - current value (t)
-      - Subtask - possible values (t)
+      1. Subtask - current value (t)
+      2. Subtask - possible values (t)
 
 ### Scope Creep
 
 1. Make Little HTML Applets for describing what I'm talking about:
    1. Sudoku Primer (/) - MVP complete
+2. There has to be a better way than just writing all this damn code with heaps of forEach Loops, look up currying please!
 
 ### Further Ideas
 
@@ -34,6 +38,7 @@
 - a way to insert js widgets into blog posts written in markdown
   - A way to insert them with variables called within the markdown?
 - Is the best way to query elements in a document child -> or parent to child in this context?
+- What is the best way to read from an object while iterating through that same object and changing its state as you do so?
 
 ## Document Details
 

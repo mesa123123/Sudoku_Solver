@@ -44,6 +44,36 @@ export class grid {
   getState(): Array<Array<cell>> {
     return this.cells;
   }
+  // Get the cells that share a row column or square with a particular cell
+  getDependentCells(
+    cellCoordinates: Array<number>,
+    grid: Array<Array<cell>>
+  ): Array<cell> {
+    var dependentCells: Array<cell> = [];
+    grid.forEach((checkRow) => {
+      checkRow.forEach((checkCell) => {
+        let checkCellCoordinates: Array<number> = [
+          checkCell.row,
+          checkCell.column,
+          checkCell.squareRow,
+          checkCell.squareColumn,
+        ];
+        if (checkCellCoordinates[3] == cellCoordinates[3]) {
+          if (checkCellCoordinates[2] == cellCoordinates[2]) {
+            dependentCells.push(checkCell);
+          } else if (checkCellCoordinates[1] == cellCoordinates[1]) {
+            dependentCells.push(checkCell);
+          }
+        } else if (
+          checkCellCoordinates[2] == cellCoordinates[2] &&
+          checkCellCoordinates[0] == cellCoordinates[0]
+        ) {
+          dependentCells.push(checkCell);
+        }
+      });
+    });
+    return dependentCells;
+  }
 
   cleanPencilMarks(): void {
     this.cells.forEach((row) => {
@@ -55,32 +85,16 @@ export class grid {
           cell.squareRow,
           cell.squareColumn,
         ];
-        // Get the rows and columns where the cell could be affected
-        let notPossibleNumbers: Array<number> = [];
-        this.cells.forEach((checkRow) => {
-          checkRow.forEach((checkCell) => {
-            let checkCellCoords: Array<number> = [
-              checkCell.row,
-              checkCell.column,
-              checkCell.squareRow,
-              checkCell.squareColumn,
-            ];
-            if (checkCell.value != null) {
-              if (checkCellCoords[3] == coordinates[3]) {
-                if (checkCellCoords[2] == coordinates[2]) {
-                  notPossibleNumbers.push(checkCell.value);
-                } else if (checkCellCoords[1] == coordinates[1]) {
-                  notPossibleNumbers.push(checkCell.value);
-                }
-              } else if (
-                checkCellCoords[2] == coordinates[2] &&
-                checkCellCoords[0] == coordinates[0]
-              ) {
-                notPossibleNumbers.push(checkCell.value);
-              }
-            }
-          });
-        });
+        // Get the rows and columns where the cell could be affected, filter them out so only those with values remain
+        let dependentCellsWithValue: Array<cell> = this.getDependentCells(
+          coordinates,
+          this.cells
+        ).filter((cell) => cell.value != null)
+        let notPossibleNumbers: Array<number> = dependentCellsWithValue.map(
+          (cell) => {
+            return cell.value;
+          }
+        );
         cell.possible = cell.possible.filter(
           (value) => !notPossibleNumbers.includes(value)
         );
@@ -102,8 +116,9 @@ export class Solver {
     });
     return grid;
   }
-
+  // Solve any hidden singles that are about in the grid
   hiddenSingles(grid: Array<Array<cell>>): Array<Array<cell>> {
+    
     return grid;
   }
 }

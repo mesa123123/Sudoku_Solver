@@ -2,22 +2,26 @@
 
 ## Requirements List
 
-1. Blog Post (\*)
+1. Blog Post (*)
 
    1. Subtask - Introduction (/)
    2. Subtask - Structure of the Game (/)
       1. SVG Widget (/)
       2. Writings (/)
-      3. SVG Animations (\*)
-   3. Subtask - Discussing of common solving techniques (\*)
-   4. Subtask - Data Structures (\*)
-   5. Subtask - GUI Display (\*)
-   6. Subtask - Limitations to the Solving Technique, and where to go from here (\*)
+      3. SVG Animations (*)
+   3. Subtask - Discussing of common solving techniques (*)
+   4. Subtask - Data Structures (*)
+   5. Subtask - GUI Display (*)
+   6. Subtask - Limitations to the Solving Technique, and where to go from here (*)
 
 2. Solver Programme (d)
    1. Game Object (t)
       1. Subtask - solve method (d)
          - Perhaps make each type of solve method one function within the game object
+         - Hidden Singles
+         - Naked/Hidden Pairs
+         - Naked/Hidden Triplets
+         - Omission
       2. Subtask - game state (t)
           - set (t) - this is completed in the constructor
           - get (t)
@@ -46,7 +50,7 @@
 
 This document outlines the requirements and their status to keep track of the project, the requirements status will follow a model as follows:
 
-1. Todo - requirements will sit in this state by default - This is denoted by (\*)
+1. Todo - requirements will sit in this state by default - This is denoted by (*)
 2. Doing - which will be broken down into the following steps (This will be denoted by the word DOING):
    Analysis - we don't know what the feature will need so we're figuring that out (a) _note this is usually not required because the analysis should be done here_
    Development - feature is being created (d)

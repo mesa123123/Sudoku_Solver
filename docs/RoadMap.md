@@ -18,10 +18,10 @@
    1. Game Object (t)
       1. Subtask - solve method (d)
          - Perhaps make each type of solve method one function within the game object
-         - Hidden Singles
-         - Naked/Hidden Pairs
-         - Naked/Hidden Triplets
-         - Omission
+            - Naked/Hidden Singles (t)
+            - Naked/Hidden Pairs
+            - Naked/Hidden Triplets
+            - Omission
       2. Subtask - game state (t)
           - set (t) - this is completed in the constructor
           - get (t)
@@ -43,6 +43,7 @@
   - A way to insert them with variables called within the markdown?
 - Is the best way to query elements in a document child -> or parent to child in this context?
 - What is the best way to read from an object while iterating through that same object and changing its state as you do so?
+- What's the best way to structure a sudoku board so that it works faster in memory, 2d or 1d array?
 
 ## Document Details
 

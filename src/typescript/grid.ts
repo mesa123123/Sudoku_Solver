@@ -38,7 +38,7 @@ export class grid {
     });
     return houseCells;
   }
-
+  // Should this be in the solver class??? I feel like there are going to be too many side effects by keeping it in here...
   cleanPencilMarks(): void {
     this.cells.forEach((row) => {
       row.forEach((cell) => {

@@ -53,5 +53,5 @@ The purpose of this document is to log time spent on the project, it will outlin
 
 | Date - Time | Progress Achieved | Activity Breakdown | Lessons Learned | LADRs Written |
 | --- | --- | --- | --- | --- |
-| 11.1.22 2304 | n/a | Unit Tests Debugged and Supporting functions sorted out for the higher order groupings of cells | gotta put the jest expects in a function in order for them to properly throw things, otherwise they'll just not work | n/a |
+| 11.1.22 2304 | 2.2 | Unit Tests Debugged and Supporting functions sorted out for the higher order groupings of cells | gotta put the jest expects in a function in order for them to properly throw things, otherwise they'll just not work | n/a |
 

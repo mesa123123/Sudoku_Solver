@@ -24,9 +24,9 @@
       2. Subtask - game state (t)
           - set (t) - this is completed in the constructor
           - get (t)
-   2. Cell Object (t)
-      1. Subtask - current value (t)
-      2. Subtask - possible values (t)
+   2. Cell Object (/)
+      1. Subtask - current value (/)
+      2. Subtask - possible values (/)
 
 ### Scope Creep
 

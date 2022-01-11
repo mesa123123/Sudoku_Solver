@@ -19,9 +19,8 @@
       1. Subtask - solve method (d)
          - Perhaps make each type of solve method one function within the game object
             - Naked/Hidden Singles (t)
-            - Naked/Hidden Pairs
-            - Naked/Hidden Triplets
-            - Omission
+            - Naked/Hidden Groups (d)
+            - Omission (*)
       2. Subtask - game state (t)
           - set (t) - this is completed in the constructor
           - get (t)

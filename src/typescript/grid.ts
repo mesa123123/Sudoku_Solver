@@ -1,4 +1,4 @@
-import { cell } from "./cell"
+import { cell } from "./cell";
 
 export class grid {
   cells: Array<Array<cell>>;
@@ -8,11 +8,11 @@ export class grid {
     for (var _i = 1; _i < 10; _i++) {
       cells.push(new Array<cell>());
       for (var _j = 1; _j < 10; _j++) {
-        let row = _i % 3 == 0 ? 3 : _i % 3;
-        let column = _j % 3 == 0 ? 3 : _j % 3;
-        let cellValue =
-          startingState[_i][_j] == 0 ? null : startingState[_i][_j];
-        cells[_i].push(new cell(cellValue, row, column, row, column));
+        let row: number = _i;
+        let column: number = _j;
+        let cellValue: number =
+          startingState[_i][_j] == 0 ? 0 : startingState[_i][_j];
+        cells[_i].push(new cell(cellValue, row, column));
       }
     }
     this.cells = cells;
@@ -26,26 +26,17 @@ export class grid {
     cellCoordinates: Array<number>,
     grid: Array<Array<cell>>
   ): Array<Array<cell>> {
-    let dependentCells: cell[][];
-    grid.flat().forEach((checkCell) => {
-      let checkCellCoordinates = checkCell.getCoordinates();
-      if (checkCellCoordinates[3] == cellCoordinates[3]) {
-        if (checkCellCoordinates[2] == cellCoordinates[2]) {
-          // Immediate Square
-          dependentCells[0].push(checkCell);
-        } else if (checkCellCoordinates[1] == cellCoordinates[1]) {
-          // Column
-          dependentCells[2].push(checkCell);
-        }
-      } else if (
-        checkCellCoordinates[2] == cellCoordinates[2] &&
-        checkCellCoordinates[0] == cellCoordinates[0]
-      ) {
-        // Row
-        dependentCells[1].push(checkCell);
-      }
+    let houseCells: cell[][];
+    houseCells[0] = grid.flat().filter((checkCell) => {
+      return checkCell.getCoordinates()[0] == cellCoordinates[0];
     });
-    return dependentCells;
+    houseCells[1] = grid.flat().filter((checkCell) => {
+      return checkCell.getCoordinates()[1] == cellCoordinates[1];
+    });
+    houseCells[2] = grid.flat().filter((checkCell) => {
+      return checkCell.getCoordinates()[2] == cellCoordinates[2];
+    });
+    return houseCells;
   }
 
   cleanPencilMarks(): void {
@@ -70,4 +61,3 @@ export class grid {
     });
   }
 }
-

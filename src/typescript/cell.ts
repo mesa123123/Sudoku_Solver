@@ -14,6 +14,11 @@ export class cell {
     squareRow: number,
     squareColumn: number
   ) {
+    if (
+      [row, column, squareRow, squareColumn].some((num) => num < 1 || num > 3)
+    ) {
+      throw new RangeError(`Sudoku is 3x3 you can't create a cell with more columns than that!`);
+    }
     this.value = value === 0 ? null : value;
     this.row = row;
     this.column = column;
@@ -33,3 +38,4 @@ export class cell {
     return coordinates;
   }
 }
+

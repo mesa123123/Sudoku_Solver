@@ -30,26 +30,28 @@ describe("Cell Row and Column Location Tests", () => {
   });
 
   test("Any number above three or below one should not be used to instantiate a cell object", () => {
-  expect(new cell(
-      0,
-      randouter(1, 3),
-      randouter(1, 3),
-      randouter(1, 3),
-      randouter(1, 3)
-    )).toThrow(Error)
+    expect(() => {
+      new cell(
+        0,
+        randouter(1, 3),
+        randouter(1, 3),
+        randouter(1, 3),
+        randouter(1, 3)
+      )
+    }).toThrow(RangeError(`Sudoku is 3x3 you can't create a cell with more columns than that!`));
   });
 
   test("Negative numbers in any coordinate should not be used to instantiate a cell object", () => {
-  expect(new cell(
-      0,
-      randint(1, 3) * -1,
-      randint(1, 3) * -1,
-      randint(1, 3) * -1,
-      randint(1, 3) * -1
-    )).toThrow(Error)
+    expect(() => {
+      new cell(
+        0,
+        randint(1, 3) * -1,
+        randint(1, 3) * -1,
+        randint(1, 3) * -1,
+        randint(1, 3) * -1
+      );
+    }).toThrow(RangeError(`Sudoku is 3x3 you can't create a cell with more columns than that!`));
   });
-
-
 });
 
 describe("Cell Object Testing Possible Values", () => {

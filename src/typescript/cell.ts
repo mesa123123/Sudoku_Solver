@@ -34,7 +34,7 @@ export class cell {
           ? 3
           : 2
         : 1;
-    this.possible = value === 0 ? [...Array(10).keys()].slice(1) : null;
+    this.possible = value === 0 ? Array.from(Array(10).keys()).slice(1) : null;
   }
 
   getCoordinates(): Array<number> {

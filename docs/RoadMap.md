@@ -15,7 +15,7 @@
    6. Subtask - Limitations to the Solving Technique, and where to go from here (*)
 
 2. Solver Programme (d)
-   1. Game Object (t)
+   1. Game Object (d)
       1. Subtask - solve method (d)
          - Perhaps make each type of solve method one function within the game object
             - Naked/Hidden Singles (t)

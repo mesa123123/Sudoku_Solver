@@ -33,6 +33,8 @@
 1. Make Little HTML Applets for describing what I'm talking about:
    1. Sudoku Primer (/) - MVP complete
 2. There has to be a better way than just writing all this damn code with heaps of forEach Loops, look up currying please!
+3. These objects feel messy, honestly look at solid principles, its too late in your game not to have them committed to memory by now, design patterns too please!
+4. Look up how best to throw errors from a constructor this is popping up often in this project and I'm not sure how best to do this
 
 ### Further Ideas
 

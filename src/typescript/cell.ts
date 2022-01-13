@@ -12,7 +12,7 @@ export class cell {
         `Sudoku is 3x3 you can't create a cell with more columns than that!`
       );
     }
-    this.value = value === 0 ? null : value;
+    this.value = value === 0 ? 0 : value;
     this.row = row;
     this.column = column;
     // I Really Couldn't be bothered with the if elses so this will have to do!

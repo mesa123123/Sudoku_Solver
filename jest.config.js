@@ -7,4 +7,9 @@ export default {
   transform: {
     "^.+\\.(ts|tsx)$": "ts-jest",
   },
+  globals: {
+    "ts-jest": {
+      tsconfig: "./tsconfig.json",
+    },
+  },
 };

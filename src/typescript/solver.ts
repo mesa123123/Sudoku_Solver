@@ -14,6 +14,29 @@ export class Solver {
     });
     return grid;
   }
+
+  // Remove all unnecessary pencil marks from all houses, this is quite computationally expensive if we do this after every change, could we just do this to the houses affected by the changed cell? @todo
+  cleanPencilMarks(grid: grid): grid {
+    grid.cells.forEach((row) => {
+      row.forEach((cell) => {
+        // Get the rows and columns where the cell could be affected, filter them out so only those with values remain
+        let dependentCellsWithValue: Array<cell> = grid
+          .getHouses(cell.getCoordinates(), grid.cells)
+          .flat()
+          .filter((cell) => cell.value != 0 );
+        let notPossibleNumbers: Array<number> = dependentCellsWithValue.map(
+          (cell) => {
+            return cell.value;
+          }
+        );
+        cell.possible = cell.possible.filter(
+          (value) => !notPossibleNumbers.includes(value)
+        );
+      });
+    });
+    return grid
+  }
+
   // Solve any hidden singles that are about in the grid
   hiddenSingles(grid: grid): Array<Array<cell>> {
     grid.cells.forEach((gridRow) => {
@@ -59,11 +82,12 @@ export class Solver {
     });
     return cellFrequencies;
   }
- 
+
   //Need an algorithm to find out if the n numbers in a houseFrequencyChart, are occuring in n number of cells, I'll call this a grouping of cells
-  checkForCellGrouping(frequencyChart: Map<number, number>, house: Array<cell>): void {
-    return null
+  checkForCellGrouping(
+    frequencyChart: Map<number, number>,
+    house: Array<cell>
+  ): void {
+    return null;
   }
-
-
 }

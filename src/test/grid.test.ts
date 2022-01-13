@@ -1,5 +1,4 @@
 import { grid } from "../typescript/grid";
-import { cell } from "../typescript/cell";
 import * as testData from "./gridTestData";
 
 describe("Testing Constructor Function Positive Path", () => {
@@ -23,14 +22,14 @@ describe("Testing Constructor Function Positive Path", () => {
   });
 });
 
-describe.skip("Testing Constructor Function Negative Paths", () => {
-  it.each<Array<Array<number>>>([
-    testData.longLengthArray,
-    testData.shortLengthArray,
+describe.only("Testing Constructor Function Negative Paths", () => {
+  it.each<Array<Array<Array<number>>>>([
+    [testData.longLengthArray],
+    [testData.shortLengthArray],
   ])(
     "should not produce a grid object if the 2D Array of Numbers does not have the length 9x9",
     (data) => {
-      expect((data) => {
+      expect(() => {
         return new grid(data);
       }).toThrowError(testData.rowCountErrorMessage);
     }
@@ -39,11 +38,11 @@ describe.skip("Testing Constructor Function Negative Paths", () => {
   it("should not allow a starting state with more than one copy of any number between 1-9 in a single house to construct and should return an error", () => {});
 });
 
-describe.skip("Testing getState Method", () => {
+describe("Testing getState Method", () => {
   it("should return a 9x9 array of cells", () => {});
 });
 
-describe.skip("Testing getHouses Function", () => {
+describe("Testing getHouses Function", () => {
   it("The houses for a given cell coordinate should all have nine members", () => {});
   it("The first house in the returned array should have the same grid number", () => {});
   it("The second house in the returned array should have the same column number", () => {});

@@ -6,35 +6,35 @@ export class grid {
   constructor(startingState: Array<Array<number>>) {
     // This should make sure only the right kinds of arrays are being dealt to the class and we don't muck around making shitty sudokus
     let startingStateStatus: string = "";
-    if (startingStateStatus.length !== 9) {
-      startingStateStatus.concat(
-        "The startingState does not have exactly 9 rows, please make sure this is the case. "
-      );
+    if (startingState.length != 9) {
+      startingStateStatus = startingStateStatus + "The startingState does not have exactly 9 rows, please make sure this is the case. ";
     }
     startingState.some((row) => {
-      if (row.length !== 9)
-        startingStateStatus.concat(
-          "Not all rows in the starting state have exactly 9 members, please make sure this is the case "
-        );
+      if (row.length != 9)
+        startingStateStatus = startingStateStatus + "Not all rows in the starting state have exactly 9 members, please make sure this is the case ";
     });
-    if (startingStateStatus !== "") {
+    if (startingStateStatus != "") {
       throw new Error(startingStateStatus);
     }
-    let cells: Array<Array<cell>> = new Array<Array<cell>>()
-    for (var _i = 0; _i < 9; _i++) {
+    let cells: Array<Array<cell>> = new Array<Array<cell>>();
+    for (var i = 0; i < 9; i++) {
       cells.push(new Array<cell>());
-      for (var _j = 0; _j < 9; _j++) {
-        let row: number = _i + 1;
-        let column: number = _j + 1;
+      for (var j = 0; j < 9; j++) {
+        let row: number = i + 1;
+        let column: number = j + 1;
         // As we go through the loops check if the number is within the range 1-9 if its not throw an error
-        if (startingState[_i][_j] > 9 || startingState[_i][_j] < 0) {
+        if (startingState[i][j] > 9 || startingState[i][j] < 0) {
           throw new Error(
-            "The number entered for row " + _i + ", column " + _j + " is not within the range 1-9, this is required for the puzzle"
+            "The number entered for row " +
+              i +
+              ", column " +
+              j +
+              " is not within the range 1-9, this is required for the puzzle"
           );
         }
         let cellValue: number =
-          startingState[_i][_j] == 0 ? 0 : startingState[_i][_j];
-        cells[_i].push(new cell(cellValue, row, column));
+          startingState[i][j] == 0 ? 0 : startingState[i][j];
+        cells[i].push(new cell(cellValue, row, column));
       }
     }
     this.cells = cells;

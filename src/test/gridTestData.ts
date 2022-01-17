@@ -33,6 +33,31 @@ export let longLengthArray: Array<Array<number>> = [
   [0, 4, 0, 0, 5, 0, 0, 3, 6],
   [7, 0, 3, 0, 1, 8, 0, 0, 0],
 ];
+export let longRowArray: Array<Array<number>> = [
+  [0, 0, 0, 2, 6, 0, 7, 0, 1],
+  [6, 8, 0, 0, 7, 0, 0, 9, 0],
+  [1, 9, 0, 0, 0, 4, 5, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [8, 2, 0, 4, 3, 1, 0, 0, 0, 0],
+  [0, 0, 4, 6, 0, 2, 9, 0, 0],
+  [0, 5, 0, 0, 0, 3, 0, 2, 8],
+  [0, 0, 9, 3, 0, 0, 0, 7, 4],
+  [0, 4, 0, 0, 5, 0, 0, 3, 6],
+]
+
+export let shortRowArray: Array<Array<number>> = [
+  [0, 0, 0, 2, 6, 0, 7, 0, 1],
+  [6, 8, 0, 0, 7, 0, 0, 9, 0],
+  [1, 9, 0, 0, 0, 4, 5, 0, 0],
+  [8, 2, 0, 1, 0, 0, 0, 4, 0],
+  [0, 0, 4, 0, 2, 9, 0, 0],
+  [0, 5, 0, 0, 0, 3, 0, 2, 8],
+  [0, 0, 9, 3, 0, 0, 0, 7, 4],
+  [0, 4, 0, 0, 5, 0, 0, 3, 6],
+  [7, 0, 3, 0, 1, 8, 0, 0, 0],
+]
+
+export let memberCountErrorMessage: string = "Not all rows in the starting state have exactly 9 members, please make sure this is the case "
 
 export let rowCountErrorMessage: string = "The startingState does not have exactly 9 rows, please make sure this is the case. "
 

@@ -40,6 +40,9 @@
 
 - svg learnings with css - how I made the sudoku widget and the interface
   - Changing css properties based on related parent classes
+
+### Templating Engine That Uses Markdown
+
 - a way to insert js widgets into blog posts written in markdown
   - A way to insert them with variables called within the markdown?
 - Is the best way to query elements in a document child -> or parent to child in this context?

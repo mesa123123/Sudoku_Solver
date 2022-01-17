@@ -17,12 +17,14 @@ describe("Testing Constructor Function Positive Path", () => {
   });
   it("should have the  numbers populated in the right places", () => {
     let cellValueArray = new Array<number>();
-    validGrid.cells.flat().forEach((cell) => { cellValueArray.push(cell.value); });
+    validGrid.cells.flat().forEach((cell) => {
+      cellValueArray.push(cell.value);
+    });
     expect(cellValueArray).toStrictEqual(testData.validArray.flat());
   });
 });
 
-describe.only("Testing Constructor Function Negative Paths", () => {
+describe("Testing Constructor Function Negative Paths", () => {
   it.each<Array<Array<Array<number>>>>([
     [testData.longLengthArray],
     [testData.shortLengthArray],
@@ -34,12 +36,25 @@ describe.only("Testing Constructor Function Negative Paths", () => {
       }).toThrowError(testData.rowCountErrorMessage);
     }
   );
+  it.each<Array<Array<Array<number>>>>([
+    [testData.longRowArray],
+    [testData.shortRowArray],
+  ])(
+    "should not produce a grid object if the 2D array of Numbers has any row length that is not 9",
+    (data) => {
+      expect(() => {
+        return new grid(data);
+      }).toThrowError(testData.memberCountErrorMessage);
+    }
+  );
+  it("should produce an error highlighting both row length and array length when the starting state has deficiencies in data", () => {})
   it("should not insert any number that isn't between 1-9 and should produce a range error", () => {});
   it("should not allow a starting state with more than one copy of any number between 1-9 in a single house to construct and should return an error", () => {});
 });
 
 describe("Testing getState Method", () => {
   it("should return a 9x9 array of cells", () => {});
+  it("given a grid object, unchanged from instantation, it should return the 9x9 array of cells that fits the statring state that was called into the class", () => {});
 });
 
 describe("Testing getHouses Function", () => {

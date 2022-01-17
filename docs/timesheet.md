@@ -50,12 +50,14 @@ The purpose of this document is to log time spent on the project, it will outlin
 | ----------- | ----------------- | --------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------- |
 | 7.1.22 2330 | n/a               | Refactoring and moving repeated code into functions | used a more liberal seasoning of filter functions, not sure if they'll work though will see | n/a           |
 
-| Date - Time | Progress Achieved | Activity Breakdown | Lessons Learned | LADRs Written |
-| --- | --- | --- | --- | --- |
-| 11.1.22 2304 | 2.2 | Unit Tests Debugged and Supporting functions sorted out for the higher order groupings of cells | gotta put the jest expects in a function in order for them to properly throw things, otherwise they'll just not work | n/a |
+| Date - Time  | Progress Achieved | Activity Breakdown                                                                              | Lessons Learned                                                                                                      | LADRs Written |
+| ------------ | ----------------- | ----------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | ------------- |
+| 11.1.22 2304 | 2.2               | Unit Tests Debugged and Supporting functions sorted out for the higher order groupings of cells | gotta put the jest expects in a function in order for them to properly throw things, otherwise they'll just not work | n/a           |
 
+| Date - Time  | Progress Achieved | Activity Breakdown                                                                                                           | Lessons Learned                                                                                                 | LADRs Written |
+| ------------ | ----------------- | ---------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | ------------- |
+| 12.1.22 1600 | n/a               | Coded in more automated tests, fixed up some problems with the grid class, moved methods into solver class so it fits neater | it.each has to have one (two?) more dimensions of array on top of what you're already passing into the function | n/a           |
 
-| Date - Time | Progress Achieved | Activity Breakdown | Lessons Learned | LADRs Written |
-| --- | --- | --- | --- | --- |
-| 12.1.22 1600 | n/a | Coded in more automated tests, fixed up some problems with the grid class, moved methods into solver class so it fits neater | it.each has to have one (two?) more dimensions of array on top of what you're already passing into the function  | n/a  |
-
+| Date - Time  | Progress Achieved | Activity Breakdown                                                                                         | Lessons Learned                   | LADRs Written |
+| ------------ | ----------------- | ---------------------------------------------------------------------------------------------------------- | --------------------------------- | ------------- |
+| 17.1.22 2359 | n/a               | Testing and debugging, planned more tests and sorted out problems with the string concat method, its weird | Dont use the string concat method | n/a           |

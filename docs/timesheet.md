@@ -61,3 +61,9 @@ The purpose of this document is to log time spent on the project, it will outlin
 | Date - Time  | Progress Achieved | Activity Breakdown                                                                                         | Lessons Learned                   | LADRs Written |
 | ------------ | ----------------- | ---------------------------------------------------------------------------------------------------------- | --------------------------------- | ------------- |
 | 17.1.22 2359 | n/a               | Testing and debugging, planned more tests and sorted out problems with the string concat method, its weird | Dont use the string concat method | n/a           |
+
+
+| Date - Time | Progress Achieved | Activity Breakdown | Lessons Learned | LADRs Written |
+| --- | --- | --- | --- | --- |
+| 12.1.22 0206 | 2.1.2 Completed!!! | Fixed Testing of Grid Objects, Rearranged Roadmap to fit better | Typescript types get complex! especially exporting them | 005 |
+

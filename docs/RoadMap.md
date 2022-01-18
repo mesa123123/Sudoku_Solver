@@ -7,14 +7,14 @@
    2. Structure of the Game (/)
       2. Subtask - Writings (/)
    3. Discussing of common solving techniques (*)
-      1. Subtask - Naked Singles
-      2. Subtask - Hidden Singles
-      3. Subtask - Naked and Hidden Groups
-      4. Subtask - Omission
+      1. Subtask - Naked Singles (*)
+      2. Subtask - Hidden Singles (*)
+      3. Subtask - Naked and Hidden Groups (*)
+      4. Subtask - Omission (*)
    4. Data Structures (*)
-      1. Subtask -  Cells Structure
-      2. Subtask -  Grid Structure
-      3. Subtask -  Solver Structure
+      1. Subtask -  Cells Structure (*)
+      2. Subtask -  Grid Structure (*)
+      3. Subtask -  Solver Structure (*)
    5. Limitations to the Solving Technique, and where to go from here (*)
 
 2. Solver Programme (*)
@@ -30,9 +30,10 @@
    2. Cell Object (/)
       1. Subtask - current value (/)
       2. Subtask - possible values (/)
-   3. Subtask - GUI Display (*)
-      1. Subtask - SVG Animations (*)
-      2. Subtask - SVG Widget (/)
+   3. GUI Display (*)
+      1. Subtask - SVG Widget (/)
+      2. Subtask - SVG Animations (*)
+
 
 ### Scope Creep
 

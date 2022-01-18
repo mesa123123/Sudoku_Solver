@@ -77,7 +77,7 @@ export class Solver {
     // And increment in the frequency table for each value that turns up
     house.forEach((cell) => {
       cell.possible.forEach((p) => {
-        cellFrequencies[p] = cellFrequencies[p]++;
+        cellFrequencies[p]++;
       });
     });
     return cellFrequencies;

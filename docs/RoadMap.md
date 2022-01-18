@@ -3,30 +3,36 @@
 ## Requirements List
 
 1. Blog Post (*)
+   1. Introduction (/)
+   2. Structure of the Game (/)
+      2. Subtask - Writings (/)
+   3. Discussing of common solving techniques (*)
+      1. Subtask - Naked Singles
+      2. Subtask - Hidden Singles
+      3. Subtask - Naked and Hidden Groups
+      4. Subtask - Omission
+   4. Data Structures (*)
+      1. Subtask -  Cells Structure
+      2. Subtask -  Grid Structure
+      3. Subtask -  Solver Structure
+   5. Limitations to the Solving Technique, and where to go from here (*)
 
-   1. Subtask - Introduction (/)
-   2. Subtask - Structure of the Game (/)
-      1. SVG Widget (/)
-      2. Writings (/)
-      3. SVG Animations (*)
-   3. Subtask - Discussing of common solving techniques (*)
-   4. Subtask - Data Structures (*)
-   5. Subtask - GUI Display (*)
-   6. Subtask - Limitations to the Solving Technique, and where to go from here (*)
-
-2. Solver Programme (d)
+2. Solver Programme (*)
    1. Game Object (d)
       1. Subtask - solve method (d)
          - Perhaps make each type of solve method one function within the game object
             - Naked/Hidden Singles (t)
             - Naked/Hidden Groups (d)
             - Omission (*)
-      2. Subtask - game state (t)
-          - set (t) - this is completed in the constructor
-          - get (t)
+      2. Subtask - game state (/)
+          - set (/)
+          - get (/)
    2. Cell Object (/)
       1. Subtask - current value (/)
       2. Subtask - possible values (/)
+   3. Subtask - GUI Display (*)
+      1. Subtask - SVG Animations (*)
+      2. Subtask - SVG Widget (/)
 
 ### Scope Creep
 

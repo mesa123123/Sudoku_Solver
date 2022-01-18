@@ -26,9 +26,9 @@ export class grid {
         if (startingState[i][j] > 9 || startingState[i][j] < 0) {
           throw new Error(
             "The number entered for row " +
-              i +
+              row +
               ", column " +
-              j +
+              column +
               " is not within the range 1-9, this is required for the puzzle"
           );
         }
@@ -40,7 +40,7 @@ export class grid {
     this.cells = cells;
   }
 
-  getCells(): Array<Array<cell>> {
+  getState(): Array<Array<cell>> {
     return this.cells;
   }
   // Get the cells that share a row column or square with a particular cell this is referred to as a 'house'

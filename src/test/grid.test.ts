@@ -47,17 +47,36 @@ describe("Testing Constructor Function Negative Paths", () => {
       }).toThrowError(testData.memberCountErrorMessage);
     }
   );
-  it("should produce an error highlighting both row length and array length when the starting state has deficiencies in data", () => {})
-  it("should not insert any number that isn't between 1-9 and should produce a range error", () => {});
-  it("should not allow a starting state with more than one copy of any number between 1-9 in a single house to construct and should return an error", () => {});
+  it("should produce an error highlighting both row length and array length when the starting state has deficiencies in data", () => {
+    expect(() => {
+      return new grid(testData.shortRowAndShortLengthArray);
+    }).toThrowError(
+      testData.rowCountErrorMessage + testData.memberCountErrorMessage
+    );
+  });
+  it.each<Array<testData.WrongArray>>([
+    [testData.highNumberArray],
+    [testData.negativeNumberArray],
+  ])(
+    "should not insert any number that isn't between 1-9 and should produce a range error",
+    (data) => {
+      expect(() => {
+        return new grid(data.startingState);
+      }).toThrowError(
+        testData.wrongNumberErrorMessage(
+          data.coordinates[0],
+          data.coordinates[1]
+        )
+      );
+    }
+  );
 });
 
-describe("Testing getState Method", () => {
-  it("should return a 9x9 array of cells", () => {});
-  it("given a grid object, unchanged from instantation, it should return the 9x9 array of cells that fits the statring state that was called into the class", () => {});
-});
-
-describe("Testing getHouses Function", () => {
+describe.skip("Testing getHouses Function", () => {
+  let testGrid: grid;
+  beforeEach(() => {
+    testGrid = new grid(testData.validArray);
+  });
   it("The houses for a given cell coordinate should all have nine members", () => {});
   it("The first house in the returned array should have the same grid number", () => {});
   it("The second house in the returned array should have the same column number", () => {});

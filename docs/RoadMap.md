@@ -34,7 +34,6 @@
       1. Subtask - SVG Widget (/)
       2. Subtask - SVG Animations (*)
 
-
 ### Scope Creep
 
 1. Make Little HTML Applets for describing what I'm talking about:

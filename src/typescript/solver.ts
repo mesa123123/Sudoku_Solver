@@ -67,27 +67,32 @@ export class Solver {
   }
 
   // Finding hidden n > 1s is going to be tricky, basically we have a cell with n possible numbers and we need to find out if those possible numbers are occuring as a group
-  getHouseFrequency(house: Array<cell>): Map<number, number> {
+  getReversePossibilities(house: Array<cell>): Map<number, Array<number>> {
     //Create a Map that will get frequencies of all of the cells
-    let cellFrequencies: Map<number, number> = new Map<number, number>();
+    let reversePossibilities: Map<number, Array<number>> = new Map<number, Array<number>>();
+    // Each key has a number between 1 and 9 given its position in the house (this is arbitrary but ordering them helps the algorithm
     for (let i = 1; i < 10; i++) {
-      cellFrequencies[i] = 0;
+      reversePossibilities[i] = new Array<number>();
     }
     // Now cycle through the house and see what possible numbers are still in play
-    // And increment in the frequency table for each value that turns up
+    // And add that cell number (relative to the house) to the array for each value that turns up
+    let cellNumber = 0;
     house.forEach((cell) => {
+      cellNumber = cellNumber++;
       cell.possible.forEach((p) => {
-        cellFrequencies[p]++;
+        reversePossibilities[cellNumber].push(p);
       });
     });
-    return cellFrequencies;
+    return reversePossibilities;
   }
 
   //Need an algorithm to find out if the n numbers in a houseFrequencyChart, are occuring in n number of cells, I'll call this a grouping of cells
   checkForCellGrouping(
-    frequencyChart: Map<number, number>,
+    reversePossibilities: Map<number, Array<number>>,
     house: Array<cell>
   ): void {
-    return null;
+    let rPossibilitiesLengths: Array<number> = new Array<number>();
+    reversePossibilities.forEach((value) => { rPossibilitiesLengths.push(value.length) })
+     
   }
 }

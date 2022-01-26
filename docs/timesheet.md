@@ -67,3 +67,8 @@ The purpose of this document is to log time spent on the project, it will outlin
 | --- | --- | --- | --- | --- |
 | 12.1.22 0206 | 2.1.2 Completed!!! | Fixed Testing of Grid Objects, Rearranged Roadmap to fit better | Typescript types get complex! especially exporting them | 005 |
 
+
+| Date - Time | Progress Achieved | Activity Breakdown | Lessons Learned | LADRs Written |
+| --- | --- | --- | --- | --- |
+| 26.1.22 2324 | n/a | Wrote a little more on the solver code | motivation for this project and coding in my freetime has gotten harder now that I'm back at work. Its good just to do 20 mins to keep the habit up | n/a |
+

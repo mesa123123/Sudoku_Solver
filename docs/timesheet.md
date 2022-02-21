@@ -78,4 +78,3 @@ The purpose of this document is to log time spent on the project, it will outlin
 | Date - Time | Progress Achieved | Activity Breakdown | Lessons Learned | LADRs Written |
 | --- | --- | --- | --- | --- |
 | 22.2.22 0000 | n/a | Worked on the solver function, I think I finally figured out how it will work | n/a | n/a |
-

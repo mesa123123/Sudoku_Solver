@@ -62,13 +62,20 @@ The purpose of this document is to log time spent on the project, it will outlin
 | ------------ | ----------------- | ---------------------------------------------------------------------------------------------------------- | --------------------------------- | ------------- |
 | 17.1.22 2359 | n/a               | Testing and debugging, planned more tests and sorted out problems with the string concat method, its weird | Dont use the string concat method | n/a           |
 
+| Date - Time  | Progress Achieved  | Activity Breakdown                                              | Lessons Learned                                         | LADRs Written |
+| ------------ | ------------------ | --------------------------------------------------------------- | ------------------------------------------------------- | ------------- |
+| 12.1.22 0206 | 2.1.2 Completed!!! | Fixed Testing of Grid Objects, Rearranged Roadmap to fit better | Typescript types get complex! Especially exporting them | 005           |
+
+| Date - Time  | Progress Achieved | Activity Breakdown                     | Lessons Learned                                                                                                                                     | LADRs Written |
+| ------------ | ----------------- | -------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
+| 26.1.22 2324 | n/a               | Wrote a little more on the solver code | motivation for this project and coding in my freetime has gotten harder now that I'm back at work. Its good just to do 20 mins to keep the habit up | n/a           |
+
+| Date - Time  | Progress Achieved | Activity Breakdown                                                | Lessons Learned                                                                                                                                                                                                                                                                                     | LADRs Written |
+| ------------ | ----------------- | ----------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
+| 30.1.22 2300 | n/a               | Worked on general solver method for finding hidden pairs + higher | Maps are fucking annoying in typescript and there must be a way to work on getting that todo sorted out, also I need to start putting a bloody timer on my desk for when I want to start getting picky about finding the "neat" way to do things, STOP LETTING THE PERFECT BE THE ENEMY OF THE GOOD | n/a           |
+
 
 | Date - Time | Progress Achieved | Activity Breakdown | Lessons Learned | LADRs Written |
 | --- | --- | --- | --- | --- |
-| 12.1.22 0206 | 2.1.2 Completed!!! | Fixed Testing of Grid Objects, Rearranged Roadmap to fit better | Typescript types get complex! especially exporting them | 005 |
-
-
-| Date - Time | Progress Achieved | Activity Breakdown | Lessons Learned | LADRs Written |
-| --- | --- | --- | --- | --- |
-| 26.1.22 2324 | n/a | Wrote a little more on the solver code | motivation for this project and coding in my freetime has gotten harder now that I'm back at work. Its good just to do 20 mins to keep the habit up | n/a |
+| 22.2.22 0000 | n/a | Worked on the solver function, I think I finally figured out how it will work | n/a | n/a |
 

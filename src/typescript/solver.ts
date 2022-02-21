@@ -66,7 +66,7 @@ export class Solver {
     return grid.cells;
   }
 
-  // This function returns a table of which cells in the house (arbitrarily numbered 1-9) each pencil mark occurs within
+  // This function returns a table of which cells in the house (arbitrarily numbered 1-9) each pencil mark occurs within e.g. a pencil mark of 1 occurs in the following cells relative to the house
   getReversePossibilities(house: Array<cell>): Map<number, Array<number>> {
     //Create a Map that will get frequencies of all of the cells
     let reversePossibilities: Map<number, Array<number>> = new Map<
@@ -74,32 +74,67 @@ export class Solver {
       Array<number>
     >();
     // Each key has a number between 1 and 9 given its position in the house (this is arbitrary but ordering them helps the algorithm)
-    for (let i = 1; i < 10; i++) {
+    for (let i: number = 1; i < 10; i++) {
       reversePossibilities[i] = new Array<number>();
     }
-    // Now cycle through the house and see what possible numbers are still in play
-    // And add that cell number (relative to the house) to the array for each value that turns up
+    // Add that cell number (relative to the house) to the array for each value that turns up
     let cellNumber = 0;
     house.forEach((cell) => {
       cellNumber = cellNumber++;
       cell.possible.forEach((p) => {
-        reversePossibilities[cellNumber].push(p);
+        reversePossibilities[p].push(cellNumber);
       });
     });
     return reversePossibilities;
   }
 
-  //Need an algorithm to find out if the n numbers in a houseFrequencyChart, are occuring in n number of cells, I'll call this a grouping of cells
-  checkForCellGrouping(house: Array<cell>): void {
-    // get the frequency table for the house
-    let reversePossibilities = this.getReversePossibilities(house);
-    // check the frequency table for numbers that are pencil marks in the same number of cells, i.e. get a frequency of frequencies
+  //Not Sure if I need this...
+  getFrequencyTable(house: Array<cell>): Map<number, number> {
     let frequencyTable: Map<number, number> = new Map<number, number>();
-    // This is dogshit! What the fuck am I even thinking, have I even analysed this problem at all! Fuck...
-    reversePossibilities.forEach((key) => {
-      frequencyTable[key.length] =
-        frequencyTable[key.length] == NaN ? 1 : frequencyTable[key.length] + 1;
-    });
-    // now find out if there are any keys and values in their frequency table that have that length or higher
+    return frequencyTable;
+  }
+
+  // I've called a fof where the number of frequencys with a certain frequency is the same (equalfofs) or higher (greaterfofs) than the frequency.
+  findFOf(frequencyTable: Array<number>): Array<Array<number>> {
+    // Create a double barrelled array of numbers (an array of arrays with length two, double barrelled just sounds better)
+    let fofs: Array<Array<number>> = new Array<Array<number>>();
+    // Loop through all the possible frequencys that are the fofs we could be looking for (there is no need to investigate ones because that would be a lone single)
+    for (let i: number = 2; i < 10; i++) {
+      // Keep count of the number of times a frequency pops up
+      let frequencyCount: number = 0;
+      // Loop through the various frequencies in the frequency table and take note if it is the length were looking for
+      frequencyTable.forEach(f => {
+        if (f == i) {
+          frequencyCount++;
+        }
+      });
+      // if its the same its an equalfof so push it to the first barrel
+      if (frequencyCount == i) {
+        fofs[0].push(i);
+      } else if (frequencyCount > i) {
+        // if the frequency count is greater push it to the second barrel
+        fofs[1].push(i);
+      }
+    }
+    // return the greaterfofs and equalfofs in a double barrelled array
+    return fofs;
+  }
+
+  //Need an algorithm to find out if the n numbers in a houseFrequencyChart, are occuring in the same n number of cells, I'll call this a grouping of cells
+  checkForCellGrouping(house: Array<cell>): void {
+    // get a reversePosibilites table for the house, this table tells us for each type of pencil mark in which cells (relative to the house) does that pencil mark occur?
+    let reversePossibilities = this.getReversePossibilities(house);
+    // get a frequency table for the number of times a certain pencil mark appears this will just be the length of the respective arrays in the reversePossibilities table, this is represented as an array where the relative pencil mark type is array member +1
+    let frequencies: Array<number> = Array.from(
+      reversePossibilities.values(),
+      (p) => p.length
+    );
+    let fofs: Array<Array<number>> = this.findFOf(frequencies);
+    // isolate the true and greaterfofs into diferent variables
+    // A greaterfof will have a harder time find a grouping, because combinatorics, so only deal with it if there are no equalfofs
+    if (fofs[0].length != 0) {
+      
+    }
+    // each equalfof will point to a number of cells that a pencil mark exists within (i.e. the length of its reversePossibilities entry), thus if there the equalfofs match, e.g. the reversePossibilities of 2 twos or the 3 twos, are the same table then we can call that a grouping
   }
 }
